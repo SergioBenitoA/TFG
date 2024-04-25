@@ -1,0 +1,267 @@
+body {
+  background-image: none;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width:  100%;
+}  
+
+main{
+  background-color: #FFECCB;
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.titulo {
+  color: #FFAFDA;
+  text-align: center;
+  font-size: 92px;
+  z-index: 1;
+  height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.transparent-button {
+  background-color: transparent;
+  color: white; /* Color del texto */
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 5px; /* Redondea las esquinas */
+  padding: 10px 20px; /* Espacio alrededor del texto */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.transparent-button:hover {
+  background-color: white; /* Cambia el color de fondo al pasar el cursor */
+  color: black; /* Cambia el color del texto al pasar el cursor */
+}
+
+.white-text{
+  color: white;
+}
+
+
+
+/* NAV*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #DEB887;
+  padding: 15px 20px;
+  width: 100%;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-left {
+  margin-right: auto;
+}
+
+.navbar-right {
+  margin-left: auto;
+}
+
+.navbar-left li{
+  margin-left: 20px;
+}
+
+.navbar-right li {
+  margin-right: 20px; /* Ajusta el valor según sea necesario */
+}
+
+.navbar a {
+  color: #000000; /* Color del texto */
+  text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navbar-right li:last-child {
+  margin-right: 40px; /* No hay margen a la izquierda para el primer elemento */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/*RESERVAR YA*/
+
+.reservarYa {
+  background-color: #5D997C;
+  color: #ffffff;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+}
+
+h5{
+  text-align: justify;
+}
+
+.texto{
+  width: 65%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+
+.btnReserva{
+  width: 35%;
+  height: 100%;
+  text-align: center;
+}
+
+.reserva{
+  background-color: #DEB887;
+  border-radius: 10%;
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-color: #DEB887; /* Eliminar el borde del botón */
+  border-radius: 5px; /* Hacer las esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold;
+}
+
+.div-card{
+  width: 80%;
+  margin: 10%;
+  margin-top: 5%;
+}
+
+.btn-card{
+  background-color: #5D997C;
+  border-radius: 10%;
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-color: #5D997C; /* Eliminar el borde del botón */
+  border-radius: 5px; /* Hacer las esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.contenedor {
+  margin-top: 2%;
+  text-align: center;
+}
+
+.color-fondo{
+  background-color: #FFECCB;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
