@@ -2,51 +2,17 @@ document.getElementById("learn-more-button").addEventListener("click", function(
    window.location.href = "principal.html";
 });
 
-// const btnLeft = document.querySelector(".btn-left"),
-//       btnRight = document.querySelector(".btn-right"),
-//       slider = document.querySelector("#slider"),
-//       sliderSection = document.querySelectorAll(".slider-section");
+// Función para inicializar el mapa
+function initMap() {
+   // Coordenadas del centro del mapa
+   var myLatLng = {lat: -25.363, lng: 131.044};
 
+   // Opciones del mapa
+   var mapOptions = {
+       zoom: 4,            // Nivel de zoom
+       center: myLatLng    // Coordenadas del centro del mapa
+   };
 
-// btnLeft.addEventListener("click", e => moveToLeft())
-// btnRight.addEventListener("click", e => moveToRight())
-
-// setInterval(() => {
-//     moveToRight()
-// }, 3000);
-
-
-// let operacion = 0,
-//     counter = 0,
-//     widthImg = 100 / sliderSection.length;
-
-// function moveToRight() {
-//     if (counter >= sliderSection.length-1) {
-//         counter = 0;
-//         operacion = 0;
-//         slider.style.transform = `translate(-${operacion}%)`;
-//         slider.style.transition = "all ease .6s";
-//         return;
-//     } 
-//     counter++;
-//     operacion = operacion + widthImg;
-//     slider.style.transform = `translate(-${operacion}%)`;
-//     slider.style.transition = "all ease .6s"
-    
-// }  
-
-// function moveToLeft() {
-//     counter--;
-//     if (counter < 0 ) {
-//         counter = sliderSection.length-1;
-//         operacion = widthImg * (sliderSection.length-1)
-//         slider.style.transform = `translate(-${operacion}%)`;
-//         slider.style.transition = "none";
-//         return;
-//     } 
-//     operacion = operacion - widthImg;
-//     slider.style.transform = `translate(-${operacion}%)`;
-//     slider.style.transition = "all ease .6s"
-// }   
-
-
+   // Crear el mapa
+   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
