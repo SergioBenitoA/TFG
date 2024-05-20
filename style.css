@@ -75,7 +75,98 @@ main{
 
 /* NAV*/
 
-.navbar {
+nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav{
+  background-color: #DEB887;
+  box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li{
+  height: 50px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+nav a:hover{
+  background-color: black;
+  color: #DEB887;
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255,255,255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+}
+
+.menuBoton{
+  display: none;
+}
+
+.log{
+  width: 50px;
+  margin-left: 20px;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menuBoton{
+    display: block;
+  }
+}
+
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+
+
+/* .navbar {
   display: flex;
   justify-content: space-between;
   background-color: #DEB887;
@@ -108,11 +199,11 @@ main{
 }
 
 .navbar-right li {
-  margin-right: 20px; /* Ajusta el valor según sea necesario */
+  margin-right: 20px; /* Ajusta el valor según sea necesario 
 }
 
 .navbar a {
-  color: #000000; /* Color del texto */
+  color: #000000;
   text-decoration: none;
   text-decoration: none;
   font-size: 16px;
@@ -120,12 +211,12 @@ main{
 }
 
 .navbar-right li:last-child {
-  margin-right: 40px; /* No hay margen a la izquierda para el primer elemento */
+  margin-right: 40px; 
 }
 
 .navbar a:hover {
-  text-decoration: underline; /* Subrayado al pasar el cursor */
-}
+  text-decoration: underline;
+} */
 
 /*RESERVAR YA*/
 
@@ -222,7 +313,7 @@ h5{
     align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img{
-    width: 250px;
+    width: 180px;
 }
 .pie-pagina .grupo-1 .box h2{
     color: #fff;
@@ -257,6 +348,7 @@ h5{
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 }
+
 @media screen and (max-width:800px){
     .pie-pagina .grupo-1{
         width: 90%;
@@ -264,4 +356,58 @@ h5{
         grid-gap:30px;
         padding: 35px 0px;
     }
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.img500{
+  width: 500px;
+  height: 500px;
+}
+
+.fondoVerde{
+  background-color: #5D997C;
+  color: #ffffff;
 }

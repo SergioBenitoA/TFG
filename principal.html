@@ -16,18 +16,38 @@
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar">
+      <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+          <li><a href="#alojamientos">ALOJAMIENTOS</a></li>
+          <li><a href="#instalaciones">INSTALACIONES</a></li>
+          <li><a href="#">RESERVAS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+          <li><a href="#">ES</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li><img src="imagenes/logosinfondo.png" class="log" alt="Logo EL OASIS"></li>
+          <li class="hideOnMobile"><a href="#alojamientos">ALOJAMIENTOS</a></li>
+          <li class="hideOnMobile"><a href="#instalaciones">INSTALACIONES</a></li>
+          <li class="hideOnMobile"><a href="#">RESERVAS</a></li>
+          <li class="hideOnMobile"><a href="#contacto">CONTACTO</a></li>
+          <li class="hideOnMobile"><a href="#">ES</a></li>
+          <li class="menuBoton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg></a></li>
+        </ul>
+      </nav>
+        <!-- <nav class="navbar">
             <ul class="navbar-left">
                 <li><a href="#alojamientos">ALOJAMIENTOS</a></li>
-                <li><a href="#">INSTALACIONES</a></li>
-                <li><a href="#">SERVICIOS</a></li>
+                <li><a href="#instalaciones">INSTALACIONES</a></li>
                 <li><a href="#">RESERVAS</a></li>
             </ul>
             <ul class="navbar-right">
                 <li><a href="#contacto">CONTACTO</a></li>
                 <li><a href="#">ES</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
         <main>
             <!-- DESLIZADOR DE IMAGENES -->
@@ -73,8 +93,8 @@
             </div>
 
             <!-- ALOJAMIENTOS -->
-            <div id="alojamientos" class="contenedor">
-              <h1>ALOJAMIENTOS</h1>
+            <div id="alojamientos" class="pricing-header p-3 pb-md-4 mx-auto text-center contenedor">
+              <h1 class="display-4 fw-normal text-body-emphasis">ALOJAMIENTOS</h1>
             </div>
             
             <div class="d-flex justify-content-around div-card">
@@ -106,31 +126,97 @@
 
 
 
-            <div class="reservarYa d-flex flex-row">
-              <div class="texto">
-                  <h5>15% de descuento en tu primer registro </h5>
-                  <br>
-                  <h5>Sumérgete en la experiencia definitiva para los amantes del surf y
-                      la vida al aire libre. En El Oasis, te ofrecemos una combinación única
-                      de olas perfectas, un ambiente relajado a pie de playa, y 
-                      momentos inolvidables de diversión y camaradería. Desde
-                      nuestras clases de surf hasta nuestras noches de karaoke bajo las
-                      estrellas, tenemos todo lo que necesitas para unas vacaciones
-                      memorables. ¡Bienvenido a tu nuevo destino favorito!
-                  </h5>
-              </div>
-              <div class="btnReserva">
-                <button type="button" class="reserva">¡RESERVA YA!</button>
+            
+
+            <!-- INSTALACIONES -->
+            <div id="instalaciones" class="fondoVerde">
+              <div class="container marketing">
+                <hr class="featurette-divider">
+                <!-- START THE FEATURETTES -->
+                <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                  <h1 class="display-4 fw-normal text-body-emphasis"><p class="white-text">INSTALACIONES</p></h1>
+                </div>
+            
+                <div class="row featurette">
+                  <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Piscina. </h2>
+                    <p class="lead">Disfruta del frescor de nuestra piscina al aire libre, ideal para relajarse o divertirse en familia. Rodeada de vistas naturales, es el lugar perfecto para un día soleado de descanso y esparcimiento.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <img class="img500" src="imagenes/piscina.jpg">
+                  </div>
+                </div>
+            
+                <hr class="featurette-divider">
+            
+                <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Zona de barbacoas.</h2>
+                    <p class="lead">Reúnete con amigos y familia en nuestra zona de barbacoas, completamente equipada para que prepares deliciosas comidas al aire libre. Un espacio acogedor y perfecto para compartir momentos especiales mientras disfrutas del entorno natural.</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                    <img class="img500" src="imagenes/bbq.jpg">
+                  </div>
+                </div>
+            
+                <hr class="featurette-divider">
+            
+                <div class="row featurette">
+                  <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Parque Infantil.</h2>
+                    <p class="lead">Un espacio seguro y divertido para los más pequeños, nuestro parque infantil está diseñado para estimular la imaginación y la actividad física en un entorno al aire libre. Es el lugar ideal para que los niños jueguen, exploren y hagan nuevos amigos durante su estancia.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <img class="img500" src="imagenes/parque.jpg">
+                  </div>
+                </div>
+            
+                <hr class="featurette-divider">
               </div>
             </div>
-        </main>
+          
+              <!-- /END THE FEATURETTES -->
+              <div class="container marketing">
+              <hr class="featurette-divider">
+              
+              <!-- Three columns of text below the carousel -->
+              
+              <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal text-body-emphasis">OPINIONES</h1>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="imagenes/persona1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                  <h2 class="fw-normal">Laura Gómez</h2>
+                  <p>"Nuestra estancia en el camping fue maravillosa. Los niños disfrutaron mucho del parque infantil y la zona de barbacoas fue perfecta para las noches de verano. ¡Definitivamente volveremos!"</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                  <img src="imagenes/persona3.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                  <h2 class="fw-normal">Carlos Martín</h2>
+                  <p>"Excelente camping con instalaciones limpias y bien mantenidas. La piscina es amplia y siempre en perfectas condiciones. El ambiente es muy familiar y tranquilo, ideal para desconectar."</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                  <img src="imagenes/persona2.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                  <h2 class="fw-normal">Sofía Ramírez</h2>
+                  <p>"Me encantó el ambiente relajado del camping y la cercanía a la naturaleza. Las instalaciones son modernas y el personal siempre dispuesto a ayudar. Las noches de barbacoa fueron un gran acierto."</p>
+                </div><!-- /.col-lg-4 -->
+              </div><!-- /.row -->
+              <hr class="featurette-divider">
+          
+            </div>
+          </div>
+            
 
+
+        </main>
+        
+        <!-- FOOTER -->
         <footer class="pie-pagina">
           <div class="grupo-1" id="contacto">
               <div class="box">
                   <figure>
                       <a href="#">
-                          <img src="img/logotipo-sleedw.svg" alt="Logo de SLee Dw">
+                          <img src="imagenes/logosinfondo.png" alt="Logo EL OASIS">
                       </a>
                   </figure>
               </div>
@@ -144,18 +230,16 @@
               <div class="box">
                   <h2>SIGUENOS</h2>
                   <div class="red-social">
-                      <a href="#" class="fa fa-facebook"></a>
-                      <a href="#" class="fa fa-instagram"></a>
-                      <a href="#" class="fa fa-twitter"></a>
-                      <a href="#" class="fa fa-youtube"></a>
+                      <a href="https://github.com/SergioBenitoA" class="fa fa-facebook"></a>
+                      <a href="https://github.com/SergioBenitoA" class="fa fa-instagram"></a>
+                      <a href="https://github.com/SergioBenitoA" class="fa fa-twitter"></a>
                   </div>
               </div>
               <div class="box" id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5961.157273294898!2d-4.726059323348845!3d41.66484517126605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd470d55e3273467%3A0xb3fd8e57a6131b03!2sIES%20Ribera%20de%20Castilla!5e0!3m2!1ses!2ses!4v1714047347468!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
           </div>
-      </footer>
-
+        </footer>
         <script src="inicio.js"></script>
     </body>
 </html>
