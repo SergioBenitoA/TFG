@@ -29,7 +29,7 @@ main{
 .titulo {
   color: #FFAFDA;
   text-align: center;
-  font-size: 92px;
+  font-size: 70px;
   z-index: 1;
   height: 100%;
 }
@@ -47,7 +47,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 100%;
 }
 
 .transparent-button {
@@ -83,6 +83,9 @@ nav ul {
 nav{
   background-color: #DEB887;
   box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+  position: fixed;
+  z-index: 50;
+  width: 100%;
 }
 
 nav ul{
@@ -112,8 +115,20 @@ nav a:hover{
   color: #DEB887;
 }
 
+.logo-hover:hover{
+  background-color: #DEB887;
+}
+
+/* nav a:first-child:hover {
+  background-color: #DEB887; 
+} */
+
+
 nav li:first-child{
   margin-right: auto;
+}
+.spaceBet{
+  height: 50px;
 }
 
 .sidebar{
@@ -132,6 +147,10 @@ nav li:first-child{
   justify-content: flex-start;
 }
 
+.z999{
+  z-index: 999;
+}
+
 .sidebar li{
   width: 100%;
 }
@@ -145,16 +164,42 @@ nav li:first-child{
 }
 
 .log{
-  width: 50px;
-  margin-left: 20px;
+
+  width: 43px;
 }
 
-@media(max-width: 800px){
+
+@media(max-width: 850px){
   .hideOnMobile{
     display: none;
   }
+  
   .menuBoton{
     display: block;
+  }
+
+  .cardAlojamientos{
+    flex-direction: column;
+  }
+
+  .img200{
+    width: 200px;
+  }
+
+  .carousel-inner{
+    height: 300px;
+  }
+
+  .carousel-item{
+    height: 300px; 
+  }
+
+  .text-instalaciones{
+    text-align: center;
+  }
+
+  .img500{
+    height: 100%;
   }
 }
 
@@ -162,6 +207,16 @@ nav li:first-child{
   .sidebar{
     width: 100%;
   }
+  .carousel-inner{
+    height: 250px;
+  }
+  .carousel-item{
+    height: 250px; 
+  }
+}
+
+.cardAlojamientos{
+  display: flex;
 }
 
 
@@ -239,7 +294,7 @@ h5{
 }
 
 .btnReserva{
-  width: 35%;
+  width: 40%;
   height: 100%;
   text-align: center;
 }
@@ -349,13 +404,36 @@ h5{
     font-size: 15px;
 }
 
-@media screen and (max-width:800px){
+/* @media screen and (max-width:800px){
     .pie-pagina .grupo-1{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap:30px;
         padding: 35px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .box{
+      text-align: center;
+    }
+} */
+
+@media screen and (max-width:918px){
+  .pie-pagina .grupo-1{
+    /* width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:30px;
+    padding: 35px 0px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .box{
+      text-align: center;
+    }
+  }
 }
 
 /* MARKETING CONTENT
@@ -403,11 +481,33 @@ h5{
 }
 
 .img500{
-  width: 500px;
-  height: 500px;
+  width: 100%;
 }
 
 .fondoVerde{
   background-color: #5D997C;
   color: #ffffff;
+}
+
+
+/* LOGIN */
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
