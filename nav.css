@@ -39,6 +39,10 @@ nav ul {
     background-color: black;
     color: #DEB887;
   }
+
+  #faceIcon{
+    width: 24px;
+  }
   
   .logo-hover:hover{
     background-color: #DEB887;
@@ -93,7 +97,7 @@ nav ul {
     width: 43px;
   }
 
-  @media(max-width: 850px){
+  @media(max-width: 925px){
     .hideOnMobile{
       display: none;
     }

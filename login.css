@@ -37,8 +37,12 @@
     height: 73.22vh;
   }
   
-  @media(max-width: 800px){
+  @media(max-width: 918px){
     main{
         height: auto;
     }
+  }
+
+  .spacebtn{
+    height: 10px;
   }
