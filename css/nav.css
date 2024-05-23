@@ -1,153 +1,174 @@
 /* NAV*/
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #DEB887;
+  box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+}
 
 nav ul {
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  nav{
-    background-color: #DEB887;
-    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
-    position: fixed;
-    z-index: 50;
-    width: 100%;
-  }
-  
-  nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav li{
-    height: 50px;
-  }
-  
-  nav a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    font-weight: bold;
-  }
-  
-  nav a:hover{
-    background-color: black;
-    color: #DEB887;
-  }
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-  #faceIcon{
-    width: 24px;
-  }
-  
-  .logo-hover:hover{
-    background-color: #DEB887;
-  }
-  
-  /* nav a:first-child:hover {
-    background-color: #DEB887; 
-  } */
-  
-  
-  nav li:first-child{
-    margin-right: auto;
-  }
-  .spaceBet{
-    height: 50px;
-  }
-  
-  .sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255,255,255, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  
-  .z999{
-    z-index: 999;
-  }
-  
-  .sidebar li{
-    width: 100%;
-  }
-  
-  .sidebar a{
-    width: 100%;
-  }
-  
-  .menuBoton{
-    display: none;
-  }
-  
-  .log{
-  
-    width: 43px;
-  }
+nav li {
+  height: 50px;
+}
 
-  @media(max-width: 925px){
-    .hideOnMobile{
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: black;
+  color: #DEB887;
+}
+
+#faceIcon {
+  width: 24px;
+}
+
+.logo-hover:hover {
+  background-color: #DEB887;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.spaceBet {
+  height: 50px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255,255,255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.z999 {
+  z-index: 999;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  padding: 15px;
+  display: block; /* Makes it easier to tap on mobile */
+}
+
+.menuBoton {
+  display: none;
+}
+
+.log {
+  width: 43px;
+}
+
+@media (max-width: 925px) {
+  .hideOnMobile {
       display: none;
-    }
-    
-    .menuBoton{
+  }
+  
+  .menuBoton {
       display: block;
-    }
-  
-    .cardAlojamientos{
+  }
+
+  .cardAlojamientos {
       flex-direction: column;
-    }
-  
-    .img200{
+  }
+
+  .img200 {
       width: 200px;
-    }
-  
-    .carousel-inner{
+  }
+
+  .carousel-inner {
       height: 300px;
-    }
-  
-    .carousel-item{
+  }
+
+  .carousel-item {
       height: 300px; 
-    }
-  
-    .text-instalaciones{
+  }
+
+  .text-instalaciones {
       text-align: center;
-    }
-  
-    .img500{
+  }
+
+  .img500 {
       height: 100%;
-    }
   }
-  
-  @media(max-width: 400px){
-    .sidebar{
+}
+
+@media (max-width: 400px) {
+  .sidebar {
       width: 100%;
-    }
-    .carousel-inner{
+  }
+
+  .carousel-inner {
       height: 250px;
-    }
-    .carousel-item{
+  }
+
+  .carousel-item {
       height: 250px; 
-    }
   }
+}
 
-  .cardAlojamientos{
-    display: flex;
-  }
+.cardAlojamientos {
+  display: flex;
+}
 
-  ul{
-    padding-left: 0;
-    list-style: none;
+/* Dropdown Styles */
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #DEB887;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 100;
+  right: 0;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.sidebar .dropdown .dropdown-menu {
+  position: static;
+  background-color: #DEB887;
+}
+
+
+@media (max-width: 925px) {
+  .dropdown-menu {
+      position: static; /* Static position in sidebar for mobile */
+      background-color: rgba(255, 255, 255, 0.2); /* Transparent background for mobile dropdown menu */
   }
+}
