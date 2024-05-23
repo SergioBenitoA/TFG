@@ -22,18 +22,26 @@
     </head>
     <body style="background-color: #FFECCB;">
       <nav class="z999">
+        <!-- PARA MOVIL -->
         <ul class="sidebar">
           <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
           <li><a href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
           <li><a href="principal.html#instalaciones">INSTALACIONES</a></li>
           <li><a href="reservas.html">RESERVAS</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
-          <li><a href="#">ES</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">ES</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">ES</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+          </li>
           <li><a href="login.html">
             <img style="width: 24px;" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM1ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
           </a></li>
         </ul>
       </nav>
+      <!-- PARA PC -->
       <nav>
         <ul>
           <li><a href="inicio.html" class="logo-hover"><img src="../imagenes/logosinfondo.png" class="log" alt="Logo EL OASIS"></a></li>
@@ -41,7 +49,13 @@
           <li class="hideOnMobile"><a href="principal.html#instalaciones">INSTALACIONES</a></li>
           <li class="hideOnMobile"><a href="reservas.html">RESERVAS</a></li>
           <li class="hideOnMobile"><a href="#contacto">CONTACTO</a></li>
-          <li class="hideOnMobile"><a href="#">ES</a></li>
+          <li class="hideOnMobile dropdown">
+            <a href="#" class="dropdown-toggle">ES</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">ES</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+          </li>
           <li class="hideOnMobile" id="iconLi"><a href="login.html">
             <img id="faceIcon" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM1ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
           </a></li>
