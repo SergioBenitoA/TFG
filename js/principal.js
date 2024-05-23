@@ -1,24 +1,3 @@
-var map = L.map('map').setView([ 41.664899, -4.72382], 13);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-var marker = L.marker([ 41.664899,-4.72382]).addTo(map);
-// Función para inicializar el mapa
-/* function initMap() {
-   // Coordenadas del centro del mapa
-   var myLatLng = {lat: -25.363, lng: 131.044};
-
-   // Opciones del mapa
-   var mapOptions = {
-       zoom: 4,            // Nivel de zoom
-       center: myLatLng    // Coordenadas del centro del mapa
-   };
-
-   // Crear el mapa
-   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
- */
 function showSidebar(){
    const sidebar = document.querySelector('.sidebar')
    sidebar.style.display = 'flex'
@@ -38,13 +17,6 @@ document.addEventListener('DOMContentLoaded', function(){
        });
    });
 
-   const learnMore = document.getElementById("learn-more-button");
-   if(learnMore) {
-      learnMore.addEventListener("click", function() {
-         window.location.href = "principal.html";
-      });
-   }
-
    const loginA = document.querySelector('a[href="login.html"]');
    const iconLi = document.getElementById('iconLi');
    const faceIcon = document.getElementById('faceIcon');
@@ -59,3 +31,10 @@ document.addEventListener('DOMContentLoaded', function(){
       });
    }
 });
+
+var map = L.map('map').setView([ 41.664899, -4.72382], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([ 41.664899,-4.72382]).addTo(map);

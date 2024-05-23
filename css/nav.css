@@ -146,3 +146,8 @@ nav ul {
   .cardAlojamientos{
     display: flex;
   }
+
+  ul{
+    padding-left: 0;
+    list-style: none;
+  }
