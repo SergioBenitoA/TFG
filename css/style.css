@@ -190,7 +190,22 @@ h5{
 }
 
 .img500{
-  width: 100%;
+  width: 80%;
+  border-radius: 1rem;
+}
+
+@media (max-width: 925px) {
+  .img500{
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .img500{
+    width: 100%;
+    border-radius: 1rem;
+  }
 }
 
 .fondoVerde{

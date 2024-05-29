@@ -93,6 +93,10 @@ nav li:first-child {
   width: 43px;
 }
 
+.text-instalaciones {
+  text-align: justify;
+}
+
 @media (max-width: 925px) {
   .hideOnMobile {
       display: none;
@@ -124,6 +128,7 @@ nav li:first-child {
 
   .img500 {
       height: 100%;
+      border-radius: 1rem;
   }
 }
 

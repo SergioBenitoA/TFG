@@ -27,19 +27,19 @@
         <!-- PARA MOVIL -->
         <ul class="sidebar">
           <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-          <li><a href="#alojamientos">ALOJAMIENTOS</a></li>
-          <li><a href="#instalaciones">INSTALACIONES</a></li>
-          <li><a href="reservas.html">RESERVAS</a></li>
-          <li><a href="#contacto">CONTACTO</a></li>
+          <li><a id="alojamientosMobile" href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
+          <li><a id="instalacionesMobile" href="principal.html#instalaciones">INSTALACIONES</a></li>
+          <li><a id="reservasMobile" href="reservas.html">RESERVAS</a></li>
+          <li><a id="contactoMobile" href="#contacto">CONTACTO</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">ES</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">ES</a></li>
-                <li><a href="#">EN</a></li>
+            <a href="#" class="dropdown-toggle idioma" id="idiomaMobile">ES</a>
+            <ul class="dropdown-menu idiomas" id="idiomas">
+                <li class="opcion"><a href="#"><span>ES</span></a></li>
+                <li class="opcion"><a href="#"><span>EN</span></a></li>
             </ul>
           </li>
           <li><a href="login.html">
-            <img style="width: 24px;" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM1ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
+            <img style="width: 24px;" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM3ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
           </a></li>
         </ul>
       </nav>
@@ -47,19 +47,19 @@
       <nav>
         <ul>
           <li><a href="inicio.html" class="logo-hover"><img src="../imagenes/logosinfondo.png" class="log" alt="Logo EL OASIS"></a></li>
-          <li class="hideOnMobile"><a href="#alojamientos">ALOJAMIENTOS</a></li>
-          <li class="hideOnMobile"><a href="#instalaciones">INSTALACIONES</a></li>
-          <li class="hideOnMobile"><a href="reservas.html">RESERVAS</a></li>
-          <li class="hideOnMobile"><a href="#contacto">CONTACTO</a></li>
+          <li class="hideOnMobile"><a id="alojamientosPC" href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
+          <li class="hideOnMobile"><a id="instalacionesPC" href="principal.html#instalaciones">INSTALACIONES</a></li>
+          <li class="hideOnMobile"><a id="reservasPC" href="reservas.html">RESERVAS</a></li>
+          <li class="hideOnMobile"><a id="contactoPC" href="#contacto">CONTACTO</a></li>
           <li class="hideOnMobile dropdown">
-            <a href="#" class="dropdown-toggle">ES</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">ES</a></li>
-                <li><a href="#">EN</a></li>
+            <a href="#" class="dropdown-toggle idioma" id="idioma">ES</a>
+            <ul class="dropdown-menu idiomas" id="idiomas">
+                <li class="opcion"><a href="#"><span>ES</span></a></li>
+                <li class="opcion"><a href="#"><span>EN</span></a></li>
             </ul>
           </li>
           <li class="hideOnMobile" id="iconLi"><a href="login.html">
-            <img id="faceIcon" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM1ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
+            <img id="faceIcon" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM3ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
           </a></li>
           <li class="menuBoton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg></a></li>
         </ul>
@@ -94,137 +94,134 @@
             
             
             <!-- TEXTO + RESERVA YA -->
-            <div class="reservarYa d-flex cardAlojamientos">
-                <div class="texto">
-                    <h5 class="text-instalaciones">15% de descuento en tu primer registro </h5>
-                    <br>
-                    <h5 class="text-instalaciones">Sumérgete en la experiencia definitiva para los amantes del surf y
-                        la vida al aire libre. En El Oasis, te ofrecemos una combinación única
-                        de olas perfectas, un ambiente relajado a pie de playa, y 
-                        momentos inolvidables de diversión y camaradería. Desde
-                        nuestras clases de surf hasta nuestras noches de karaoke bajo las
-                        estrellas, tenemos todo lo que necesitas para unas vacaciones
-                        memorables. ¡Bienvenido a tu nuevo destino favorito!
-                    </h5>
-                </div>
-                <div class="btnReserva">
-                  <a class="reserva" href="reservas.html" style="color: black; width: 100%; height: 100%; text-decoration: none;">¡RESERVA YA!</a>
-                </div>
-                <hr/>
-            </div>
+<div class="reservarYa d-flex cardAlojamientos">
+  <div class="texto">
+      <h5 class="text-instalaciones" id="descuento">15% de descuento en tu primer registro</h5>
+      <br>
+      <h5 class="text-instalaciones" id="experiencia">
+          Sumérgete en la experiencia definitiva para los amantes del surf y
+          la vida al aire libre. En El Oasis, te ofrecemos una combinación única
+          de olas perfectas, un ambiente relajado a pie de playa, y 
+          momentos inolvidables de diversión. Desde nuestras clases de surf hasta nuestras noches de karaoke bajo las
+          estrellas, tenemos todo lo que necesitas para unas vacaciones
+          memorables. ¡Bienvenido a tu nuevo destino favorito!
+      </h5>
+  </div>
+  <div class="btnReserva">
+      <a class="reserva" href="reservas.html" style="color: black; width: 100%; height: 100%; text-decoration: none;" id="btnReservaYa">¡RESERVA YA!</a>
+  </div>
+  <hr/>
+</div>
 
+<!-- ALOJAMIENTOS -->
+<div id="alojamientos" class="pricing-header p-3 pb-md-4 mx-auto text-center contenedor">
+  <h1 class="display-4 fw-normal text-body-emphasis" id="tituloAlojamientos">ALOJAMIENTOS</h1>
+</div>
 
-            <!-- ALOJAMIENTOS -->
-            <div id="alojamientos" class="pricing-header p-3 pb-md-4 mx-auto text-center contenedor">
-              <h1 class="display-4 fw-normal text-body-emphasis">ALOJAMIENTOS</h1>
-            </div>
-            
-            <div class="cardAlojamientos gap-5 justify-content-around div-card">
-              <div class="card">
-                <img src="../imagenes/parcela.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Parcelas</h5>
-                  <p class="card-text">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
-                  <a href="reservas.html" class="btn-card">Reservar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../imagenes/glamping.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Glamping</h5>
-                  <p class="card-text">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
-                  <a href="reservas.html" class="btn-card">Reservar</a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../imagenes/bungalow.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Bungalows</h5>
-                  <p class="card-text">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
-                  <a href="reservas.html" class="btn-card">Reservar</a>
-                </div>
-              </div>
-            </div>
+<div class="cardAlojamientos gap-5 justify-content-around div-card">
+  <div class="card">
+      <img src="../imagenes/parcela.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title" id="tituloParcelas">Parcelas</h5>
+          <p class="card-text" id="descripcionParcelas">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
+          <a href="reservas.html" class="btn-card" id="btnReservarParcelas">Reservar</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="../imagenes/glamping.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title" id="tituloGlamping">Glamping</h5>
+          <p class="card-text" id="descripcionGlamping">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
+          <a href="reservas.html" class="btn-card" id="btnReservarGlamping">Reservar</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="../imagenes/bungalow.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title" id="tituloBungalows">Bungalows</h5>
+          <p class="card-text" id="descripcionBungalows">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
+          <a href="reservas.html" class="btn-card" id="btnReservarBungalows">Reservar</a>
+      </div>
+  </div>
+</div>
 
-            <!-- INSTALACIONES -->
-            <div id="instalaciones" class="fondoVerde">
-              <div class="container marketing">
-                <hr/>
-                <!-- START THE FEATURETTES -->
-                <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                  <h1 class="display-4 fw-normal text-body-emphasis"><p class="white-text">INSTALACIONES</p></h1>
-                </div>
-            
-                <div class="row featurette">
-                  <div class="col-md-7">
-                    <h2 class="text-instalaciones featurette-heading fw-normal lh-1">Piscina</h2>
-                    <p class="text-instalaciones lead">Disfruta del frescor de nuestra piscina al aire libre, ideal para relajarse o divertirse en familia. Rodeada de vistas naturales, es el lugar perfecto para un día soleado de descanso y esparcimiento.</p>
-                  </div>
-                  <div class="col-md-5">
-                    <img class="img500" src="../imagenes/piscina.jpg">
-                  </div>
-                </div>
-            
-                <hr class="featurette-divider">
-            
-                <div class="row featurette">
-                  <div class="col-md-7 order-md-2">
-                    <h2 class="text-instalaciones featurette-heading fw-normal lh-1">Zona de barbacoas</h2>
-                    <p class="text-instalaciones lead">Reúnete con amigos y familia en nuestra zona de barbacoas, completamente equipada para que prepares deliciosas comidas al aire libre. Un espacio acogedor y perfecto para compartir momentos especiales mientras disfrutas del entorno natural.</p>
-                  </div>
-                  <div class="col-md-5 order-md-1">
-                    <img class="img500" src="../imagenes/bbq.jpg">
-                  </div>
-                </div>
-            
-                <hr class="featurette-divider">
-            
-                <div class="row featurette">
-                  <div class="col-md-7">
-                    <h2 class="text-instalaciones featurette-heading fw-normal lh-1">Parque Infantil</h2>
-                    <p class="text-instalaciones lead">Un espacio seguro y divertido para los más pequeños, nuestro parque infantil está diseñado para estimular la imaginación y la actividad física en un entorno al aire libre. Es el lugar ideal para que los niños jueguen, exploren y hagan nuevos amigos durante su estancia.</p>
-                  </div>
-                  <div class="col-md-5">
-                    <img class="img500" src="../imagenes/parque.jpg">
-                  </div>
-                </div>
-            
-                <hr class="featurette-divider">
-              </div>
-            </div>
-          
-              <!-- /END THE FEATURETTES -->
-              <div class="container marketing">
-                <hr/>
-              
-              <!-- Three columns of text below the carousel -->
-              
-              <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal text-body-emphasis">OPINIONES</h1>
-              </div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <img src="../imagenes/persona1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
-                  <h2 class="fw-normal">Laura Gómez</h2>
-                  <p>"Nuestra estancia en el camping fue maravillosa. Los niños disfrutaron mucho del parque infantil y la zona de barbacoas fue perfecta para las noches de verano. ¡Definitivamente volveremos!"</p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                  <img src="../imagenes/persona3.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
-                  <h2 class="fw-normal">Carlos Martín</h2>
-                  <p>"Excelente camping con instalaciones limpias y bien mantenidas. La piscina es amplia y siempre en perfectas condiciones. El ambiente es muy familiar y tranquilo, ideal para desconectar."</p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                  <img src="../imagenes/persona2.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
-                  <h2 class="fw-normal">Sofía Ramírez</h2>
-                  <p>"Me encantó el ambiente relajado del camping y la cercanía a la naturaleza. Las instalaciones son modernas y el personal siempre dispuesto a ayudar. Las noches de barbacoa fueron un gran acierto."</p>
-                </div><!-- /.col-lg-4 -->
-              </div><!-- /.row -->
-              <hr/>
-              <hr/>
-          
-            </div>
+<!-- INSTALACIONES -->
+<div id="instalaciones" class="fondoVerde">
+  <div class="container marketing">
+      <hr/>
+      <!-- START THE FEATURETTES -->
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal text-body-emphasis"><p class="white-text" id="tituloInstalaciones">INSTALACIONES</p></h1>
+      </div>
+
+      <div class="row featurette">
+          <div class="col-md-7">
+              <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloPiscina">Piscina</h2>
+              <p class="text-instalaciones lead" id="descripcionPiscina">Disfruta del frescor de nuestra piscina al aire libre, ideal para relajarse o divertirse en familia. Rodeada de vistas naturales, es el lugar perfecto para un día soleado de descanso y esparcimiento.</p>
           </div>
-        </main>
+          <div class="col-md-5">
+              <img class="img500" src="../imagenes/piscina.jpg">
+          </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+              <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloBBQ">Zona de barbacoas</h2>
+              <p class="text-instalaciones lead" id="descripcionBBQ">Reúnete con amigos y familia en nuestra zona de barbacoas, completamente equipada para que prepares deliciosas comidas al aire libre. Un espacio acogedor y perfecto para compartir momentos especiales mientras disfrutas del entorno natural.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+              <img class="img500" src="../imagenes/bbq.jpg">
+          </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+          <div class="col-md-7">
+              <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloParque">Parque Infantil</h2>
+              <p class="text-instalaciones lead" id="descripcionParque">Un espacio seguro y divertido para los más pequeños, nuestro parque infantil está diseñado para estimular la imaginación y la actividad física en un entorno al aire libre. Es el lugar ideal para que los niños jueguen, exploren y hagan nuevos amigos durante su estancia.</p>
+          </div>
+          <div class="col-md-5">
+              <img class="img500" src="../imagenes/parque.jpg">
+          </div>
+      </div>
+
+      <hr class="featurette-divider">
+  </div>
+</div>
+
+<!-- /END THE FEATURETTES -->
+<div class="container marketing">
+  <hr/>
+
+  <!-- Three columns of text below the carousel -->
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis" id="tituloOpiniones">OPINIONES</h1>
+  </div>
+  <div class="row">
+      <div class="col-lg-4">
+          <img src="../imagenes/persona1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <h2 class="fw-normal" id="nombreLaura">Laura Gómez</h2>
+          <p id="opinionLaura">"Nuestra estancia en el camping fue maravillosa. Los niños disfrutaron mucho del parque infantil y la zona de barbacoas fue perfecta para las noches de verano. ¡Definitivamente volveremos!"</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+          <img src="../imagenes/persona3.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <h2 class="fw-normal" id="nombreCarlos">Carlos Martín</h2>
+          <p id="opinionCarlos">"Excelente camping con instalaciones limpias y bien mantenidas. La piscina es amplia y siempre en perfectas condiciones. El ambiente es muy familiar y tranquilo, ideal para desconectar."</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+          <img src="../imagenes/persona2.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+          <h2 class="fw-normal" id="nombreSofia">Sofía Ramírez</h2>
+          <p id="opinionSofia">"Me encantó el ambiente relajado del camping y la cercanía a la naturaleza. Las instalaciones son modernas y el personal siempre dispuesto a ayudar. Las noches de barbacoa fueron un gran acierto."</p>
+      </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+  <hr/>
+  <hr/>
+</div>
+</main>
+
         
         <!-- FOOTER -->
 <footer class="pie-pagina">
@@ -237,23 +234,24 @@
           </figure>
       </div>
       <div class="box">
-          <h2>SOBRE NOSOTROS</h2>
+          <h2 id="sobreNosotros">SOBRE NOSOTROS</h2>
           <p>C/ Ribera de Castilla</p>
-          <p>+34 600 000 000 
+          <p>+34 600 000 000</p> 
           <p>sergy2210@gmail.com</p>
-          <p>Lunes a Domingo 10:00 - 22:00</p>
+          <p id="horario">Lunes a Domingo 10:00 - 22:00</p>
       </div>
       <div class="box">
-          <h2>SIGUENOS</h2>
+          <h2 id="siguenos">SIGUENOS</h2>
           <div class="red-social">
               <a href="https://github.com/SergioBenitoA" class="fa fa-facebook"></a>
               <a href="https://github.com/SergioBenitoA" class="fa fa-instagram"></a>
               <a href="https://github.com/SergioBenitoA" class="fa fa-twitter"></a>
           </div>
       </div>
-      <div id="map"></div>
+      <div class="box" id="map"></div>
   </div>
 </footer>
   <script src="../js/principal.js"></script>
+  <script src="../js/traductor/traductorPrincipal.js" type="module"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head></script>
+<html lang="es" data-bs-theme="auto">
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,19 +40,19 @@
       <!-- PARA MOVIL -->
       <ul class="sidebar">
         <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <li><a href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
-        <li><a href="principal.html#instalaciones">INSTALACIONES</a></li>
-        <li><a href="reservas.html">RESERVAS</a></li>
-        <li><a href="#contacto">CONTACTO</a></li>
+        <li><a id="alojamientosMobile" href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
+        <li><a id="instalacionesMobile" href="principal.html#instalaciones">INSTALACIONES</a></li>
+        <li><a id="reservasMobile" href="reservas.html">RESERVAS</a></li>
+        <li><a id="contactoMobile" href="#contacto">CONTACTO</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">ES</a>
-          <ul class="dropdown-menu">
-              <li><a href="#">ES</a></li>
-              <li><a href="#">EN</a></li>
+          <a href="#" class="dropdown-toggle idioma" id="idiomaMobile">ES</a>
+          <ul class="dropdown-menu idiomas" id="idiomas">
+              <li class="opcion"><a href="#"><span>ES</span></a></li>
+              <li class="opcion"><a href="#"><span>EN</span></a></li>
           </ul>
         </li>
         <li><a href="login.html">
-          <img style="width: 24px;" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM1ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
+          <img style="width: 24px;" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM3ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
         </a></li>
       </ul>
     </nav>
@@ -60,19 +60,19 @@
     <nav>
       <ul>
         <li><a href="inicio.html" class="logo-hover"><img src="../imagenes/logosinfondo.png" class="log" alt="Logo EL OASIS"></a></li>
-        <li class="hideOnMobile"><a href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
-        <li class="hideOnMobile"><a href="principal.html#instalaciones">INSTALACIONES</a></li>
-        <li class="hideOnMobile"><a href="reservas.html">RESERVAS</a></li>
-        <li class="hideOnMobile"><a href="#contacto">CONTACTO</a></li>
+        <li class="hideOnMobile"><a id="alojamientosPC" href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
+        <li class="hideOnMobile"><a id="instalacionesPC" href="principal.html#instalaciones">INSTALACIONES</a></li>
+        <li class="hideOnMobile"><a id="reservasPC" href="reservas.html">RESERVAS</a></li>
+        <li class="hideOnMobile"><a id="contactoPC" href="#contacto">CONTACTO</a></li>
         <li class="hideOnMobile dropdown">
-          <a href="#" class="dropdown-toggle">ES</a>
-          <ul class="dropdown-menu">
-              <li><a href="#">ES</a></li>
-              <li><a href="#">EN</a></li>
+          <a href="#" class="dropdown-toggle idioma" id="idioma">ES</a>
+          <ul class="dropdown-menu idiomas" id="idiomas">
+              <li class="opcion"><a href="#"><span>ES</span></a></li>
+              <li class="opcion"><a href="#"><span>EN</span></a></li>
           </ul>
         </li>
         <li class="hideOnMobile" id="iconLi"><a href="login.html">
-          <img id="faceIcon" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM1ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
+          <img id="faceIcon" alt="login" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAxMXEuODI1IDAgMS40MTMtLjU4OFExNCA5LjgyNSAxNCA5dC0uNTg3LTEuNDEzUTEyLjgyNSA3IDEyIDdxLS44MjUgMC0xLjQxMi41ODdRMTAgOC4xNzUgMTAgOXEwIC44MjUuNTg4IDEuNDEyUTExLjE3NSAxMSAxMiAxMVptMCAycS0xLjY1IDAtMi44MjUtMS4xNzVROCAxMC42NSA4IDlxMC0xLjY1IDEuMTc1LTIuODI1UTEwLjM1IDUgMTIgNXExLjY1IDAgMi44MjUgMS4xNzVRMTYgNy4zNSAxNiA5cTAgMS42NS0xLjE3NSAyLjgyNVExMy42NSAxMyAxMiAxM3ptMCAxMXEtMi40NzUgMC00LjY2Mi0uOTM4cS0yLjE4OC0uOTM3LTMuODI1LTIuNTc0UTEuODc1IDE4Ljg1LjkzOCAxNi42NjNRMCAxNC40NzUgMCAxMnQuOTM4LTQuNjYzcS45MzctMi4xODcgMi41NzUtMy44MjVRNS4xNSAxLjg3NSA3LjMzOC45MzhROS41MjUgMCAxMiAwdDQuNjYzLjkzOHEyLjE4Ny45MzcgMy44MjUgMi41NzRxMS42MzcgMS42MzggMi41NzQgMy44MjVRMjQgOS41MjUgMjQgMTJ0LS45MzggNC42NjNxLS45MzcgMi4xODctMi41NzQgMy44MjVxLTEuNjM4IDEuNjM3LTMuODI1IDIuNTc0UTE0LjQ3NSAyNCAxMiAyNFptMC0ycTEuOCAwIDMuMzc1LS41NzVUMTguMjUgMTkuOHEtLjgyNS0uOTI1LTIuNDI1LTEuNjEycS0xLjYtLjY4OC0zLjgyNS0uNjg4dC0zLjgyNS42ODhxLTEuNi42ODctMi40MjUgMS42MTJxMS4zIDEuMDUgMi44NzUgMS42MjVUMTIgMjJabS03LjctMy42cTEuMi0xLjMgMy4yMjUtMi4xcTIuMDI1LS44IDQuNDc1LS44cTIuNDUgMCA0LjQ2My44cTIuMDEyLjggMy4yMTIgMi4xcTEuMS0xLjMyNSAxLjcxMy0yLjk1UTIyIDEzLjgyNSAyMiAxMnEwLTIuMDc1LS43ODgtMy44ODdxLS43ODctMS44MTMtMi4xNS0zLjE3NXEtMS4zNjItMS4zNjMtMy4xNzUtMi4xNTFRMTQuMDc1IDIgMTIgMnEtMi4wNSAwLTMuODc1Ljc4N3EtMS44MjUuNzg4LTMuMTg3IDIuMTUxUTMuNTc1IDYuMyAyLjc4OCA4LjExM1EyIDkuOTI1IDIgMTJxMCAxLjgyNS42IDMuNDYzcS42IDEuNjM3IDEuNyAyLjkzN1oiLz48L3N2Zz4=" />
         </a></li>
         <li class="menuBoton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg></a></li>
       </ul>
@@ -80,169 +80,170 @@
     <div class="spaceBet"></div>
 
 
-<div class="container py-3">
-  <header>
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis">Explora Nuestras Opciones de Alojamiento</h1>
-      <p class="fs-5 text-body-secondary">Elige el alojamiento perfecto para tu escapada al aire libre, desde cómodas parcelas hasta lujosos bungalows. Reserva hoy y disfruta de una experiencia inigualable en la naturaleza a precios accesibles.</p>
+    <div class="container py-3">
+      <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal text-body-emphasis" id="headerTitulo">Explora Nuestras Opciones de Alojamiento</h1>
+          <p class="fs-5 text-body-secondary" id="headerDescripcion">Elige el alojamiento perfecto para tu escapada al aire libre, desde cómodas parcelas hasta lujosos bungalows. Reserva hoy y disfruta de una experiencia inigualable en la naturaleza a precios accesibles.</p>
+        </div>
+      </header>
+    
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color: #FFECCB;">
+                  <div class="card-header py-3" style="background-color: #DEB887;">
+                    <h4 class="my-0 fw-normal" id="parcelasTitulo">Parcelas</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">€20<small class="text-body-secondary fw-light" id="parcelasPrecio">/noche</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li id="parcelasAcceso">Acceso a electricidad y agua</li>
+                      <li id="parcelasEspacio">Espacio para carpa y vehículo</li>
+                      <li id="parcelasBanos">Baños y duchas compartidos</li>
+                      <li id="parcelasPicnic">Área de picnic con parrilla</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary booking-btn" style="background-color: #5D997C; border-color: #5D997C;" id="btnReservarParcelas">Reservar</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color: #FFECCB;">
+                  <div class="card-header py-3" style="background-color: #DEB887;">
+                    <h4 class="my-0 fw-normal" id="glampingTitulo">Glamping</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">€50<small class="text-body-secondary fw-light" id="glampingPrecio">/noche</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li id="glampingTienda">Tienda ya montada con camas reales</li>
+                      <li id="glampingElectricidad">Electricidad y calefacción interior</li>
+                      <li id="glampingTerraza">Terraza privada con mobiliario</li>
+                      <li id="glampingServicios">Acceso a servicios exclusivos</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary booking-btn" style="background-color: #5D997C; border-color: #5D997C;" id="btnReservarGlamping">Reservar</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm" style="background-color: #FFECCB;">
+                  <div class="card-header py-3" style="background-color: #DEB887;">
+                    <h4 class="my-0 fw-normal" id="bungalowsTitulo">Bungalows</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">€80<small class="text-body-secondary fw-light" id="bungalowsPrecio">/noche</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li id="bungalowsCabanas">Cabañas completamente equipadas</li>
+                      <li id="bungalowsCocina">Cocina y baño completamente privados</li>
+                      <li id="bungalowsAire">Aire acondicionado y calefacción</li>
+                      <li id="bungalowsTerraza">Terraza privada con vistas al mar</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary booking-btn" style="background-color: #5D997C; border-color: #5D997C;" id="btnReservarBungalows">Reservar</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    
+        <h2 class="display-6 text-center mb-4" id="compararTitulo">Comparar opciones</h2>
+    
+        <div class="table-responsive">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;"></th>
+                        <th style="width: 22%; background-color: #FFECCB;" id="tablaParcelas">Parcelas</th>
+                        <th style="width: 22%; background-color: #FFECCB;" id="tablaGlamping">Glamping</th>
+                        <th style="width: 22%; background-color: #FFECCB;" id="tablaBungalows">Bungalows</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th style="background-color: #FFECCB;" scope="row" class="text-start" id="compararAcceso">Acceso a electricidad y agua</th>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararPrivado">Espacio privado</th>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararBanos">Baños privados</th>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararMobiliario">Mobiliario incluido</th>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararAire">Aire acondicionado y calefacción</th>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararServicios">Servicios exclusivos</th>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararCocina">Cocina privada</th>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start" id="compararPicnic">Área de picnic con parrilla</th>
+                        <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                        <td style="width: 34%; background-color: #FFECCB;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </main>
     </div>
-  </header>
-
-  <main>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-        <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm" style="background-color: #FFECCB;">
-              <div class="card-header py-3" style="background-color: #DEB887;">
-                <h4 class="my-0 fw-normal">Parcelas</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">€20<small class="text-body-secondary fw-light">/noche</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Acceso a electricidad y agua</li>
-                  <li>Espacio para carpa y vehículo</li>
-                  <li>Baños y duchas compartidos</li>
-                  <li>Área de picnic con parrilla</li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary booking-btn" style="background-color: #5D997C; border-color: #5D997C;">Reservar</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm" style="background-color: #FFECCB;">
-              <div class="card-header py-3" style="background-color: #DEB887;">
-                <h4 class="my-0 fw-normal">Glamping</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">€50<small class="text-body-secondary fw-light">/noche</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Tienda ya montada con camas reales</li>
-                  <li>Electricidad y calefacción interior</li>
-                  <li>Terraza privada con mobiliario</li>
-                  <li>Acceso a servicios exclusivos</li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary booking-btn" style="background-color: #5D997C; border-color: #5D997C;">Reservar</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm" style="background-color: #FFECCB;">
-              <div class="card-header py-3" style="background-color: #DEB887;">
-                <h4 class="my-0 fw-normal">Bungalows</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">€80<small class="text-body-secondary fw-light">/noche</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Cabañas completamente equipadas</li>
-                  <li>Cocina y baño completamente privados</li>
-                  <li>Aire acondicionado y calefacción</li>
-                  <li>Terraza privada con vistas al mar</li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary booking-btn" style="background-color: #5D997C; border-color: #5D997C;">Reservar</button>
-              </div>
-            </div>
-          </div>
-          
-    </div>
-
-    <h2 class="display-6 text-center mb-4">Comparar opciones</h2>
-
-    <div class="table-responsive">
-        <table class="table text-center">
-            <thead>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;"></th>
-                    <th style="width: 22%; background-color: #FFECCB;">Parcelas</th>
-                    <th style="width: 22%; background-color: #FFECCB;">Glamping</th>
-                    <th style="width: 22%; background-color: #FFECCB;">Bungalows</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th style="background-color: #FFECCB;" scope="row" class="text-start">Acceso a electricidad y agua</th>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Espacio privado</th>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Baños privados</th>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Mobiliario incluido</th>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Aire acondicionado y calefacción</th>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Servicios exclusivos</th>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Cocina privada</th>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th style="width: 34%; background-color: #FFECCB;" scope="row" class="text-start">Área de picnic con parrilla</th>
-                    <td style="width: 34%; background-color: #FFECCB;"><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                    <td style="width: 34%; background-color: #FFECCB;"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
     
 </div>
 <div class="spaceBet"></div>
-<!-- FOOTER -->
-<footer class="pie-pagina">
-    <div class="grupo-1" id="contacto">
-        <div class="box">
-            <figure>
-                <a href="#">
-                    <img src="../imagenes/logosinfondo.png" alt="Logo EL OASIS">
-                </a>
-            </figure>
-        </div>
-        <div class="box">
-            <h2>SOBRE NOSOTROS</h2>
-            <p>C/ Ribera de Castilla</p>
-            <p>+34 600 000 000 
-            <p>sergy2210@gmail.com</p>
-            <p>Lunes a Domingo 10:00 - 22:00</p>
-        </div>
-        <div class="box">
-            <h2>SIGUENOS</h2>
-            <div class="red-social">
-                <a href="https://github.com/SergioBenitoA" class="fa fa-facebook"></a>
-                <a href="https://github.com/SergioBenitoA" class="fa fa-instagram"></a>
-                <a href="https://github.com/SergioBenitoA" class="fa fa-twitter"></a>
-            </div>
-        </div>
-        <div class="box" id="map">
-            
-        </div>
-    </div>
-  </footer>
+        <!-- FOOTER -->
+        <footer class="pie-pagina">
+          <div class="grupo-1" id="contacto">
+              <div class="box">
+                  <figure>
+                      <a href="#">
+                          <img src="../imagenes/logosinfondo.png" alt="Logo EL OASIS">
+                      </a>
+                  </figure>
+              </div>
+              <div class="box">
+                  <h2 id="sobreNosotros">SOBRE NOSOTROS</h2>
+                  <p>C/ Ribera de Castilla</p>
+                  <p>+34 600 000 000</p> 
+                  <p>sergy2210@gmail.com</p>
+                  <p id="horario">Lunes a Domingo 10:00 - 22:00</p>
+              </div>
+              <div class="box">
+                  <h2 id="siguenos">SIGUENOS</h2>
+                  <div class="red-social">
+                      <a href="https://github.com/SergioBenitoA" class="fa fa-facebook"></a>
+                      <a href="https://github.com/SergioBenitoA" class="fa fa-instagram"></a>
+                      <a href="https://github.com/SergioBenitoA" class="fa fa-twitter"></a>
+                  </div>
+              </div>
+              <div class="box" id="map"></div>
+          </div>
+        </footer>
+    <script src="../js/traductor/traductorReservas.js" type="module"></script>
     <script src="../js/principal.js"></script>
     </body>
 </html>
