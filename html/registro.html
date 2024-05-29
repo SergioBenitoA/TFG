@@ -130,20 +130,15 @@
 </footer>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro con éxito</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ¡Tu cuenta ha sido creada con éxito!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">OK</button>
-      </div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="../imagenes/logosinfondo.png" style="width: 20px; height: 20px;" class="rounded me-2" alt="...">
+      <strong class="me-auto">El Oasis</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      ¡Tu cuenta ha sido creada con éxito!
     </div>
   </div>
 </div>

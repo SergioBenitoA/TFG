@@ -1,4 +1,4 @@
-import { crearUsuario } from './api.js';
+import { getUsuarios, crearUsuario } from './api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const btnRegistrar = document.getElementById('btnRegistrar');
@@ -13,9 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (emailInput && nameInput && phoneInput && passwordInput) {
             try {
-                const response = await crearUsuario(nameInput, emailInput, phoneInput, passwordInput);
-                console.log(response);
-                // Aquí puedes añadir lógica adicional, como redireccionar o mostrar un mensaje al usuario
+                const usuarios = await getUsuarios();
+                const usuarioExistente = usuarios.find(usuario => usuario.correo === emailInput);
+
+                if (usuarioExistente) {
+                    // Muestra mensaje de error si el correo ya existe
+                    alert('El correo ya está registrado. Por favor, use otro correo.');
+                } else {
+                    const response = await crearUsuario(nameInput, emailInput, phoneInput, passwordInput);
+                    console.log(response);
+                    // Aquí puedes añadir lógica adicional, como redireccionar o mostrar un mensaje al usuario
+
+                    const toastTrigger = btnRegistrar
+                    const toastLiveExample = document.getElementById('liveToast')
+
+                    if (toastTrigger) {
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                    toastTrigger.addEventListener('click', () => {
+                        toastBootstrap.show()
+                    })
+                    }
+                }
             } catch (error) {
                 console.error('Error al crear usuario:', error);
             }
@@ -23,17 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn('Por favor, rellene todos los campos.');
         }
     });
-
-    var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-
-    btnRegistrar.addEventListener('click', function() {
-        modal.show();
-    });
-
-    var closeButton = document.querySelector('.close[data-dismiss="modal"]');
-    if (closeButton) {
-        closeButton.addEventListener('click', function() {
-            modal.hide();
-        });
-    }
 });
