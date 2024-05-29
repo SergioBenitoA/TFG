@@ -14,25 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (emailInput && nameInput && phoneInput && passwordInput) {
             try {
                 const usuarios = await getUsuarios();
+                console.log(usuarios);
+
                 const usuarioExistente = usuarios.find(usuario => usuario.correo === emailInput);
 
                 if (usuarioExistente) {
-                    // Muestra mensaje de error si el correo ya existe
                     alert('El correo ya está registrado. Por favor, use otro correo.');
                 } else {
-                    const response = await crearUsuario(nameInput, emailInput, phoneInput, passwordInput);
-                    console.log(response);
-                    // Aquí puedes añadir lógica adicional, como redireccionar o mostrar un mensaje al usuario
-
-                    const toastTrigger = btnRegistrar
-                    const toastLiveExample = document.getElementById('liveToast')
-
-                    if (toastTrigger) {
-                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-                    toastTrigger.addEventListener('click', () => {
-                        toastBootstrap.show()
-                    })
-                    }
+                    const resultado = await crearUsuario(nameInput, emailInput, phoneInput, passwordInput);
+                    console.log(resultado);
+                    
+                    const toastLiveExample = document.getElementById('liveToast');
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                    toastBootstrap.show();
+                    setTimeout(() => {window.location.href(principal.html)},2000);
                 }
             } catch (error) {
                 console.error('Error al crear usuario:', error);
