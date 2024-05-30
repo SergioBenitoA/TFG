@@ -7,7 +7,7 @@ export const crearUsuario = async (nombre, correo, telefono, contrasena) => {
         "contrasena_nc" : contrasena
     }
     const sendata = await fetch(
-        'http://localhost:3000/user/userssergio',
+        'https://apimap-h4m5.onrender.com/user/userssergio',
         {
             method: 'POST',
             headers: {
@@ -36,7 +36,7 @@ export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrad
     }
 
     const sendata = await fetch(
-        'http://localhost:3000/user/reservas',
+        'https://apimap-h4m5.onrender.com/user/reservas',
         {
             method: 'POST',
             headers: {
@@ -52,13 +52,13 @@ export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrad
 }
 
 export const getUsuarios = async () => {
-    const sendata = await fetch('http://localhost:3000/user/userssergio')
+    const sendata = await fetch('https://apimap-h4m5.onrender.com/user/userssergio')
     const response = await sendata.json()
     return response
 }
 
 export const getReservas = async () => {
-    const sendata = await fetch('http://localhost:3000/user/reservas')
+    const sendata = await fetch('https://apimap-h4m5.onrender.com/user/reservas')
     const response = await sendata.json()
     return response
 }
@@ -66,7 +66,7 @@ export const getReservas = async () => {
 export const deleteUsuario = async (id) => {
     
     const sendata = await fetch(
-        `http://localhost:3000/user/usuariossergio/${id}`,
+        `https://apimap-h4m5.onrender.com/user/usuariossergio/${id}`,
         {
             method: 'DELETE'
         }
@@ -80,7 +80,7 @@ export const deleteUsuario = async (id) => {
 export const deleteReserva = async (id) => {
 
     const sendata = await fetch(
-        `http://localhost:3000/user/reserva/${id}`,
+        `https://apimap-h4m5.onrender.com/user/reserva/${id}`,
         {
             method: 'DELETE'
         }
