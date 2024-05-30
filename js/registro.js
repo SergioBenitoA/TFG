@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const toastLiveExample = document.getElementById('liveToast');
                     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                     toastBootstrap.show();
-                    setTimeout(() => {window.location.href(principal.html)},2000);
+                    setTimeout(() => {window.location.href = 'principal.html'},2000);
                 }
             } catch (error) {
                 console.error('Error al crear usuario:', error);
