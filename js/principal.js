@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
    const loginA = document.querySelector('a[href="login.html"]');
    const iconLi = document.getElementById('iconLi');
    const faceIcon = document.getElementById('faceIcon');
+   const iconTrigger = document.getElementById('iconTrigger');
 
    if(iconLi && faceIcon) {
       iconLi.addEventListener('mouseenter', function() {

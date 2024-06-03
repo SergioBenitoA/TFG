@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameInput = document.getElementById('floatingName').value;
         const phoneInput = document.getElementById('floatingPhone').value;
         const passwordInput = document.getElementById('floatingPassword').value;
+        const mensajeError = document.getElementById('mensajeError');
 
         if (emailInput && nameInput && phoneInput && passwordInput) {
             try {
@@ -19,18 +20,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 const usuarioExistente = usuarios.find(usuario => usuario.correo === emailInput);
 
                 if (usuarioExistente) {
-                    alert('El correo ya está registrado. Por favor, use otro correo.');
-                } else {
-                    const resultado = await crearUsuario(nameInput, emailInput, phoneInput, passwordInput);
-                    console.log(resultado);
-                    
+                    mensajeError.textContent = "El correo ya está registrado. Por favor, use otro correo.";
                     const toastLiveExample = document.getElementById('liveToast');
                     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                     toastBootstrap.show();
-                    setTimeout(() => {window.location.href = 'principal.html'},2000);
+                } else {
+                    const resultado = await crearUsuario(nameInput, emailInput, phoneInput, passwordInput);
+
+                    if(Object.entries(resultado).length === 0){
+                        mensajeError.textContent = "Error al crear usuario";
+                        const toastLiveExample = document.getElementById('liveToast');
+                        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                        toastBootstrap.show();
+                    } else{
+                        localStorage.setItem("correo", emailInput);
+                        localStorage.setItem('showToast', 'true');
+                        
+                        window.location.href = 'principal.html';
+                    }
                 }
             } catch (error) {
-                console.error('Error al crear usuario:', error);
+                mensajeError.textContent = "Error al crear usuario";
+                const toastLiveExample = document.getElementById('liveToast');
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                toastBootstrap.show();
             }
         } else {
             console.warn('Por favor, rellene todos los campos.');

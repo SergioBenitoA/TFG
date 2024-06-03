@@ -1,4 +1,4 @@
-import { getUsuarios } from './api.js';
+import { comprobarUsuario } from './api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const btnIniciarSesion = document.getElementById('btnIniciarSesion');
@@ -11,20 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (emailInput && passwordInput) {
             try {
-                const usuarios = await getUsuarios();
-                const encryptedPassword = encryptPassword(passwordInput); // Encriptamos la contraseña
-
-                const usuario = usuarios.find(usuario => usuario.correo === emailInput && usuario.contrasena === encryptedPassword);
-
-                if (usuario) {
-                    // Guardar el usuario en localStorage
-                    localStorage.setItem('usuario', JSON.stringify(usuario));
-                    
-                    // Redirigir al usuario a la página principal
+                console.log('hola');
+                const usuarios = await comprobarUsuario(emailInput, passwordInput);
+                if(usuarios.Message){
+                    localStorage.setItem("correo", emailInput);
+                    localStorage.setItem('showToast', 'true');
+                        
                     window.location.href = 'principal.html';
-                } else {
-                    // Mostrar mensaje de error
-                    alert('Correo o contraseña incorrectos');
+                } else{
+                    mensajeError.textContent = "El correo o la contraseña son incorrectos";
+                    const toastLiveExample = document.getElementById('liveToast');
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                    toastBootstrap.show();
                 }
             } catch (error) {
                 console.error('Error al iniciar sesión:', error);
