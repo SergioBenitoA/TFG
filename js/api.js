@@ -85,6 +85,27 @@ export const comprobarUsuario = async (correo, contrasena) => {
     return response
 }
 
+// Actualizar contraseña
+export const actualizarContrasena = async (email, newPassword) => {
+    const data = {
+        "email": email,
+        "newPassword": newPassword
+    };
+    const sendata = await fetch(
+        'http://localhost:3000/user/actualizarContrasena',
+        {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+    );
+
+    const response = await sendata.json();
+    return response;
+};
+
 export const deleteUsuario = async (id) => {
     
     const sendata = await fetch(

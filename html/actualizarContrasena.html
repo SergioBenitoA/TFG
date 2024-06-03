@@ -83,24 +83,28 @@
         <main class="form-signin w-100 m-auto d-flex justify-content-center align-items-center">
           <div>
             <form style="width: 350px; background: white; padding: 2rem; border-radius: 10px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
-              <h1 class="h3 mb-3 fw-normal text-center" id="loginTitulo">Por favor, inicie sesión</h1>
+              <h1 class="h3 mb-3 fw-normal text-center" id="actualizar">Por favor, actualice la contraseña</h1>
               
               <div class="spaceBet"></div>
               <div class="form-floating">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput" id="correoLabel">Dirección de correo electrónico</label>
+                <input type="password" class="form-control" id="floatingPassword1" placeholder="Password">
+                <label for="floatingPassword" id="contrasenaLabel1">Contraseña actual</label>
+              </div>
+              <div class="spaceBet"></div>
+              <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+                  <label for="floatingPassword" id="contrasenaLabel2">Nueva contraseña</label>
               </div>
               <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword" id="contrasenaLabel">Contraseña</label>
+                <input type="password" class="form-control" id="floatingPassword3" placeholder="Password">
+                <label for="floatingPassword" id="contrasenaLabel3">Nueva contraseña</label>
               </div>
               
               <div class="spaceBet"></div>
               
               <div>
-                  <button class="btn btn-primary w-100 py-2" type="submit" style="background-color: #5D997C; border-color: #5D997C;" id="btnIniciarSesion">Iniciar sesión</button>
+                  <button class="btn btn-primary w-100 py-2" type="submit" style="background-color: #5D997C; border-color: #5D997C;" id="btnActualizarContrasena">Actualizar contraseña</button>
                   <div class="spacebtn"></div>
-                  <a href="registro.html" class="btn btn-primary w-100 py-2" style="background-color: #5D997C; border-color: #5D997C;" id="btnRegistrarse">Registrarse</a>
               </div>
             </form>
           </div>
@@ -146,13 +150,14 @@
               <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body" id="mensajeError">
-              Ha habido un problema al crear la cuenta
+              Error al actualizar la contraseña
             </div>
           </div>
         </div>
 
   <script src="../js/principal.js"></script>
-  <script src="../js/login.js" type="module"></script>
-  <script src="../js/traductor/traductorLogin.js" type="module"></script>
+  <script src="../js/traductor/traductorActualizar.js" type="module"></script>
+  <script src="../js/actualizarContra.js" type="module"></script>
+  <!-- TRADUCTOR -->
   </body>
 </html>
