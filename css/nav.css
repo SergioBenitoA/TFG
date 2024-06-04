@@ -39,6 +39,10 @@ nav a:hover {
   color: #DEB887;
 }
 
+nav a:hover span  {
+  color: #DEB887;
+}
+
 #faceIcon {
   width: 24px;
 }
@@ -97,7 +101,7 @@ nav li:first-child {
   text-align: justify;
 }
 
-@media (max-width: 925px) {
+@media (max-width: 960px) {
   .hideOnMobile {
       display: none;
   }
@@ -168,6 +172,10 @@ nav li:first-child {
 .sidebar .dropdown .dropdown-menu {
   position: static;
   background-color: #DEB887;
+}
+
+#iconMenuMobile{
+  width: 228px;
 }
 
 

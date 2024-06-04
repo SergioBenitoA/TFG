@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (emailInput && passwordInput) {
             try {
-                console.log('hola');
                 const usuarios = await comprobarUsuario(emailInput, passwordInput);
                 if(usuarios.Message){
                     localStorage.setItem("correo", emailInput);

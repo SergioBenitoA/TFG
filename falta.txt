@@ -1,5 +1,6 @@
-- Traducir mensajes
-- Desplegable login
+- Traducir mensajes y nav
+- Mensajes al cerrar sesion...
 - Actualizar contraseña
-- Cerrar sesión
 - Guardar reservas
+
+- Documentacion
