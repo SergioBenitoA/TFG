@@ -4,3 +4,4 @@
 - Guardar reservas
 
 - Documentacion
+- Eliminar cuenta?
