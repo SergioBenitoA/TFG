@@ -11,7 +11,6 @@ const idiomas = document.getElementsByClassName('opcion');
 
 // Info
 const actualizar = document.getElementById('actualizar');
-const contrasenaLabel1 = document.getElementById('contrasenaLabel1');
 const contrasenaLabel2 = document.getElementById('contrasenaLabel2');
 const contrasenaLabel3 = document.getElementById('contrasenaLabel3');
 const btnActualizarContrasena = document.getElementById('btnActualizarContrasena');
@@ -37,14 +36,12 @@ function establecerIdioma(idioma) {
     switch (idioma) {
         case 'EN':
             actualizar.textContent = 'Please, update the password';
-            contrasenaLabel1.textContent = 'Current password';
             contrasenaLabel2.textContent = 'New password';
             contrasenaLabel3.textContent = 'New password';
             btnActualizarContrasena.textContent = 'Update password';
             break;
         case 'ES':
             actualizar.textContent = 'Por favor, actualice la contraseña';
-            contrasenaLabel1.textContent = 'Contraseña actual';
             contrasenaLabel2.textContent = 'Nueva contraseña';
             contrasenaLabel3.textContent = 'Nueva contraseña';
             btnActualizarContrasena.textContent = 'Actualizar contraseña';

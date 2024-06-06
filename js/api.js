@@ -106,16 +106,16 @@ export const actualizarContrasena = async (email, newPassword) => {
     return response;
 };
 
-export const deleteUsuario = async (id) => {
+export const deleteUsuario = async (correo) => {
     
     const sendata = await fetch(
-        `http://localhost:3000/user/usuariossergio/${id}`,
+        `http://localhost:3000/user/usuariossergio/${correo}`,
         {
             method: 'DELETE'
         }
     )
 
-    const response = await sendata.json()
+    const response = await sendata.text()
 
     return response
 }

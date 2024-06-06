@@ -1,0 +1,8 @@
+#eliminarCuenta{
+    color: #5D997C; 
+    cursor: pointer;
+}
+
+#eliminarCuenta:hover {
+    text-decoration: underline;
+}

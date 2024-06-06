@@ -1,7 +1,5 @@
 - Traducir mensajes y nav
 - Mensajes al cerrar sesion...
-- Actualizar contraseña
 - Guardar reservas
 
 - Documentacion
-- Eliminar cuenta?
