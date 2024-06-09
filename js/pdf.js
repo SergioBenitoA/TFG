@@ -1,3 +1,87 @@
+import { getUsuarioCorreo , crearReserva } from './api.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btnReservar').addEventListener('click', async (event) => {
+        event.preventDefault();
+    
+        const dni = document.getElementById('floatingDNI').value;
+        const matricula = document.getElementById('floatingMatricula').value;
+        const personas = document.getElementById('floatingPersonas').value;
+        const fechaEntrada = document.getElementById('fechaEntrada').value;
+        const fechaSalida = document.getElementById('fechaSalida').value;
+        const alojamiento = document.getElementById('floatingTipoAlojamiento').value;
+        const correo = localStorage.getItem("correo");
+        
+        if (dni && matricula && personas && fechaEntrada && fechaSalida && alojamiento) {
+            const resultado = validarReserva(dni, personas, fechaEntrada, fechaSalida);
+            if (resultado.valido) {
+                debugger;
+                const usuario = await getUsuarioCorreo(correo);
+                if(usuario){
+                    console.log(alojamiento);
+                    const reserva = await crearReserva(123, dni, matricula, personas, fechaEntrada, fechaSalida, usuario.id_usuario, alojamiento);
+                    if(reserva.Message){
+                        generatePDF(usuario.nombre, usuario.correo, usuario.telefono, matricula, fechaEntrada, fechaSalida, personas);
+                    }else{
+                        alert("Error al crear la reserva");
+                    }
+                } else{
+                    alert("Debes crearte una cuenta para poder hacer una reserva");
+                }
+            } else {
+                console.log("Error: " + resultado.mensaje);
+                alert("Error: " + resultado.mensaje);
+            }
+        } else {
+            console.warn('Por favor, rellene todos los campos.');
+        }    
+    
+        function validarReserva(dni, personas, fechaEntrada, fechaSalida) {
+            console.log(fechaEntrada);
+            let hoy = new Date();
+            hoy.setHours(0, 0, 0, 0);
+    
+            // Comprobar que la fecha de entrada no sea anterior a hoy
+            if (fechaEntrada < hoy) {
+                return {
+                    valido: false,
+                    mensaje: "La fecha de entrada no puede ser anterior a hoy."
+                };
+            }
+    
+            // Comprobar que la fecha de salida no sea anterior a la fecha de entrada
+            if (fechaSalida < fechaEntrada) {
+                return {
+                    valido: false,
+                    mensaje: "La fecha de salida no puede ser anterior a la fecha de entrada."
+                };
+            }
+
+            // Comprobar que el DNI tiene 9 caracteres
+            if(dni.length !== 9){
+                return {
+                    valido: false,
+                    mensaje: "El DNI/NIE tiene que tener 9 caracteres"
+                };
+            }
+
+            // Comprobar que el DNI tiene 9 caracteres
+            if(personas > 6){
+                return {
+                    valido: false,
+                    mensaje: "El limite de personas por reserva es 6"
+                };
+            }
+    
+            // Si todo está bien, devolver válido
+            return {
+                valido: true,
+                mensaje: "Los campos son válidos."
+            };
+        }
+    });
+});
+
 async function convertImageToBase64(url) {
     const response = await fetch(url);
     const blob = await response.blob();
@@ -9,16 +93,15 @@ async function convertImageToBase64(url) {
     });
 }
 
-async function generatePDF() {
-    // Datos inventados para la demostración
+async function generatePDF(nombre, email, telefono, matricula, fechaEntrada, fechaSalida, cantidadPersonas) {
     const data = {
-        nombre: "Juan Pérez",
-        email: "juan.perez@example.com",
-        telefono: "555-1234",
-        matricula: "XYZ-123",
-        fechaEntrada: "01/07/2024",
-        fechaSalida: "15/07/2024",
-        cantidadPersonas: 4
+        nombre: nombre,
+        email: email,
+        telefono: telefono,
+        matricula: matricula,
+        fechaEntrada: fechaEntrada,
+        fechaSalida: fechaSalida,
+        cantidadPersonas: cantidadPersonas
     };
 
     const imageBase64 = await convertImageToBase64('../imagenes/logosinfondo.png');
@@ -101,4 +184,3 @@ async function generatePDF() {
     pdfMake.createPdf(docDefinition).download('reserva.pdf');
 }
 
-document.getElementById('btnReservar').addEventListener('click', generatePDF);

@@ -1,5 +1,6 @@
-- Traducir mensajes y nav
-- Mensajes al cerrar sesion...
-- Guardar reservas
+- Traducir mensajes
+- Navegador movil
+- Mensajes al cerrar sesion, iniciar sesion, login, eliminar cuenta, actualizar contraseña
+- PDF reservas
 
 - Documentacion

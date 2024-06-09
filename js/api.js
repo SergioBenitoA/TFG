@@ -22,7 +22,7 @@ export const crearUsuario = async (nombre, correo, telefono, contrasena) => {
     return response
 }
 
-export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrada, fechaSalida, idusuario) => {
+export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrada, fechaSalida, idusuario, alojamiento) => {
 
     const data = 
     { 
@@ -32,7 +32,8 @@ export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrad
         "npersonas": personas, 
         "fechaentrada": fechaEntrada, 
         "fechasalida": fechaSalida, 
-        "idusuario": idusuario
+        "idusuario": idusuario,
+        "alojamiento": alojamiento
     }
 
     const sendata = await fetch(
@@ -83,6 +84,54 @@ export const comprobarUsuario = async (correo, contrasena) => {
     const response = await sendata.json()
 
     return response
+}
+
+export async function comprobarUsuarioActualizar (correo, contrasena){
+    const data = 
+    {
+        "email": correo, 
+        "password" : contrasena
+    }
+    const sendata = await fetch(
+        'http://localhost:3000/user/loginsergio',
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+    )
+
+    const response = await sendata.json()
+
+    return response
+}
+
+
+export async function getUsuarioCorreo(email) {
+    const url = `http://localhost:3000/user/obtenerusuario/${email}`;
+    
+    try {
+        // Realizar la solicitud Fetch
+        const response = await fetch(url);
+        
+        // Verificar si la solicitud fue exitosa
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.statusText}`);
+        }
+        
+        // Convertir la respuesta a JSON
+        const data = await response.json();
+        
+        // Retornar los datos del usuario
+        return data;
+        
+    } catch (error) {
+        // Manejar errores
+        console.error('Hubo un problema con la solicitud Fetch:', error);
+        throw error;
+    }
 }
 
 // Actualizar contraseña

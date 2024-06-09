@@ -19,5 +19,6 @@ CREATE TABLE RESERVAS (
     fecha_entrada DATE NOT NULL,
     fecha_salida DATE NOT NULL,
     id_usuario INT not NULL,
+    alojamiento VARCHAR(50) NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );

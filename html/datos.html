@@ -107,6 +107,14 @@
               <input type="date" class="form-control" id="fechaSalida" name="fechaSalida" placeholder="Fecha de salida" required>
               <label for="fechaSalida" id="labelFechaSalida">Fecha de salida</label>
           </div>
+          <div class="form-floating">
+            <select class="form-select" id="floatingTipoAlojamiento" aria-label="Tipo de Alojamiento">
+                <option value="Parcela">Parcela</option>
+                <option value="Glamping">Glamping</option>
+                <option value="Bungalow">Bungalow</option>
+            </select>
+            <label for="floatingTipoAlojamiento">Tipo de Alojamiento</label>
+          </div>
   
           <div class="spaceBet"></div>
   
@@ -151,6 +159,6 @@
     <script src="../js/traductor/traductorDatos.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
-    <script src="../js/pdf.js"></script>
+    <script src="../js/pdf.js" type="module"></script>
     </body>
 </html>

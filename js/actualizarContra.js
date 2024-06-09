@@ -1,4 +1,4 @@
-import { deleteUsuario, actualizarContrasena } from './api.js';
+import { comprobarUsuarioActualizar, deleteUsuario, actualizarContrasena } from './api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const btnActualizarContrasena = document.getElementById('btnActualizarContrasena');
@@ -8,22 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const correo = localStorage.getItem("correo");
         deleteUsuario(correo).then(alert('Cuenta eliminada'));
         localStorage.setItem("correo", "");
+        window.location.href = "principal.html";
     });
 
-    btnActualizarContrasena.addEventListener('click', (event) => {
-        
+    btnActualizarContrasena.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const floatingPassword1 = document.getElementById('floatingPassword1').value;
         const floatingPassword2 = document.getElementById('floatingPassword2').value;
         const floatingPassword3 = document.getElementById('floatingPassword3').value;
 
-        if (floatingPassword2 && floatingPassword3) {
+        if (floatingPassword1 && floatingPassword2 && floatingPassword3) {
             if (floatingPassword2 === floatingPassword3){
-                try {
-                    const email = localStorage.getItem("correo");
-                    actualizarContrasena(email, floatingPassword2)
-                        .then(alert('Contraseña actualizada con éxito'));                    
-                } catch (error) {
-                    console.error('Error al iniciar sesión:', error);
-                    alert('Error al iniciar sesión. Intente nuevamente más tarde.');
+                debugger;
+                const email = localStorage.getItem("correo");
+                const usuarios = await comprobarUsuarioActualizar(email, floatingPassword1);
+                if(usuarios.Message){
+                    const actualizada = await actualizarContrasena(email, floatingPassword2);
+                    if(actualizada.Message){
+                        alert('Contraseña actualizada con éxito');
+                    } else{
+                        alert('No se ha podido actualizar la contraseña');
+                    }
+                } else{
+                    alert('La contraseña no es correcta');
                 }
             } else{
                 console.warn('Las contraseñas no coinciden');
