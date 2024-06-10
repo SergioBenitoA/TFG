@@ -1,14 +1,35 @@
 import { comprobarUsuarioActualizar, deleteUsuario, actualizarContrasena } from './api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // const myModal = document.getElementById('myModal')
+    // const myInput = document.getElementById('myInput')
+
     const btnActualizarContrasena = document.getElementById('btnActualizarContrasena');
     const eliminarCuenta = document.getElementById('eliminarCuenta');
+    const mensaje = document.getElementById('mensaje');
 
-    eliminarCuenta.addEventListener('click', (event) => {
+    eliminarCuenta.addEventListener('click', async (event) => {
+        event.preventDefault();
         const correo = localStorage.getItem("correo");
-        deleteUsuario(correo).then(alert('Cuenta eliminada'));
-        localStorage.setItem("correo", "");
-        window.location.href = "principal.html";
+
+        const usuarioEliminado = await deleteUsuario(correo);
+        if (usuarioEliminado.Message) {
+            // myModal.addEventListener('shown.bs.modal', () => {
+            //     myInput.focus()
+            // })
+            localStorage.setItem("correo", "");
+            localStorage.setItem('mensaje', 'Su cuenta se ha eliminado correctamente');
+            localStorage.setItem('showToast', 'true');
+
+            window.location.href = "principal.html";
+        } else{
+            mensaje.textContent = 'No se ha podido eliminar la cuenta';
+            const toastLiveExample = document.getElementById('liveToast');
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show();
+        }
+        
     });
 
     btnActualizarContrasena.addEventListener('click', async (event) => {
@@ -19,25 +40,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (floatingPassword1 && floatingPassword2 && floatingPassword3) {
             if (floatingPassword2 === floatingPassword3){
-                debugger;
                 const email = localStorage.getItem("correo");
                 const usuarios = await comprobarUsuarioActualizar(email, floatingPassword1);
                 if(usuarios.Message){
                     const actualizada = await actualizarContrasena(email, floatingPassword2);
                     if(actualizada.Message){
-                        alert('Contraseña actualizada con éxito');
+                        localStorage.setItem("correo", email);
+                        localStorage.setItem('mensaje', 'Contraseña actualizada con éxito');
+                        localStorage.setItem('showToast', 'true');
+
+                        window.location.href = 'principal.html';
                     } else{
-                        alert('No se ha podido actualizar la contraseña');
+                        mensaje.textContent = 'No se ha podido actualizar la contraseña';
+                        const toastLiveExample = document.getElementById('liveToast');
+                        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                        toastBootstrap.show();
                     }
                 } else{
-                    alert('La contraseña no es correcta');
+                    mensaje.textContent = 'La contraseña no es correcta';
+                    const toastLiveExample = document.getElementById('liveToast');
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                    toastBootstrap.show();
                 }
             } else{
-                console.warn('Las contraseñas no coinciden');
+                mensaje.textContent = 'Las contraseñas no coinciden';
+                const toastLiveExample = document.getElementById('liveToast');
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                toastBootstrap.show();
             }
-            
         } else {
-            console.warn('Por favor, rellene todos los campos.');
+            mensaje.textContent = 'Por favor, rellene todos los campos.';
+            const toastLiveExample = document.getElementById('liveToast');
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show();
         }
     });
 });

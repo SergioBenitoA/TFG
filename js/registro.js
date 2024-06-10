@@ -15,18 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameInput = document.getElementById('floatingName').value;
         const phoneInput = document.getElementById('floatingPhone').value;
         const passwordInput = document.getElementById('floatingPassword').value;
-        const mensajeError = document.getElementById('mensajeError');
+        const mensaje = document.getElementById('mensaje');
 
         if (emailInput && nameInput && phoneInput && passwordInput) {
             if(isPhoneValid(phoneInput)){
                 try {
-                    const usuarios = await getUsuarios();
-                    console.log(usuarios);
-    
+                    const usuarios = await getUsuarios();    
                     const usuarioExistente = usuarios.find(usuario => usuario.correo === emailInput);
     
                     if (usuarioExistente) {
-                        mensajeError.textContent = "El correo ya está registrado. Por favor, use otro correo.";
+                        mensaje.textContent = "El correo ya está registrado. Por favor, use otro correo.";
                         const toastLiveExample = document.getElementById('liveToast');
                         const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                         toastBootstrap.show();
@@ -40,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             toastBootstrap.show();
                         } else{
                             localStorage.setItem("correo", emailInput);
+                            localStorage.setItem('mensaje', '¡Bienvenido a EL OASIS!');
                             localStorage.setItem('showToast', 'true');
                             
                             window.location.href = 'principal.html';
@@ -52,11 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     toastBootstrap.show();
                 }
             } else{
-                alert('Por favor, introduzca un teléfono válido.');
-                console.warn('Por favor, introduzca un teléfono válido.');
+                mensaje.textContent = "Por favor, introduzca un teléfono válido";
+                const toastLiveExample = document.getElementById('liveToast');
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                toastBootstrap.show();
             }
         } else {
-            console.warn('Por favor, rellene todos los campos.');
+            mensaje.textContent = "Por favor, rellene todos los campos.";
+            const toastLiveExample = document.getElementById('liveToast');
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show();
         }
     });
 });

@@ -265,7 +265,7 @@
       <strong class="me-auto">El Oasis</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body">
+    <div class="toast-body" id="mensaje">
       ¡Bienvenido a EL OASIS!
     </div>
   </div>
@@ -279,6 +279,8 @@
     window.addEventListener('load', function () {
         if (localStorage.getItem('showToast') === 'true') {
             localStorage.removeItem('showToast');
+            const mensajeRecibido = localStorage.getItem('mensaje');
+            document.getElementById('mensaje').textContent = mensajeRecibido;
             var toast = new bootstrap.Toast(document.getElementById('liveToast'));
             toast.show();
         }

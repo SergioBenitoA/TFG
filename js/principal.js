@@ -21,6 +21,9 @@ function registrarse(){
         window.location.href = 'registro.html';
     } else {
         localStorage.setItem("correo", "");
+        localStorage.setItem('mensaje', '¡Hasta pronto!');
+        localStorage.setItem('showToast', 'true');
+                
         window.location.href = 'principal.html';
     }
 }
@@ -59,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function(){
             window.location.href = 'registro.html';
         } else {
             localStorage.setItem("correo", "");
+            localStorage.setItem('mensaje', '¡Hasta pronto!');
+            localStorage.setItem('showToast', 'true');
+                    
             window.location.href = 'principal.html';
         }
     });

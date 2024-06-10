@@ -156,18 +156,14 @@ export const actualizarContrasena = async (email, newPassword) => {
 };
 
 export const deleteUsuario = async (correo) => {
-    
-    const sendata = await fetch(
-        `http://localhost:3000/user/usuariossergio/${correo}`,
-        {
-            method: 'DELETE'
-        }
-    )
+    const response = await fetch(`http://localhost:3000/user/usuariossergio/${correo}`, {
+        method: 'DELETE'
+    })
 
-    const response = await sendata.text()
-
-    return response
+    const data = await response.json()
+    return data
 }
+
 
 export const deleteReserva = async (id) => {
 

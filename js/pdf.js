@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dni && matricula && personas && fechaEntrada && fechaSalida && alojamiento) {
             const resultado = validarReserva(dni, personas, fechaEntrada, fechaSalida);
             if (resultado.valido) {
-                debugger;
                 const usuario = await getUsuarioCorreo(correo);
                 if(usuario){
                     console.log(alojamiento);

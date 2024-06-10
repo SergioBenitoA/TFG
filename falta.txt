@@ -1,6 +1,5 @@
 - Traducir mensajes
-- Navegador movil
-- Mensajes al cerrar sesion, iniciar sesion, login, eliminar cuenta, actualizar contraseña
+- Confirmacion para eliminar cuenta
 - PDF reservas
 
 - Documentacion

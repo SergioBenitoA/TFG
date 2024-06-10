@@ -20,5 +20,6 @@ CREATE TABLE RESERVAS (
     fecha_salida DATE NOT NULL,
     id_usuario INT not NULL,
     alojamiento VARCHAR(50) NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE
 );
+
