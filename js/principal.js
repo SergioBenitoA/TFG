@@ -8,6 +8,23 @@ function hideSidebar(){
    sidebar.style.display = 'none'
 }
 
+function iniciarSesion(){
+    if (localStorage.getItem("correo") == "") {
+        window.location.href = 'login.html';
+    } else {
+        window.location.href = 'actualizarContrasena.html'
+    }
+}
+
+function registrarse(){
+    if (localStorage.getItem("correo") == "") {
+        window.location.href = 'registro.html';
+    } else {
+        localStorage.setItem("correo", "");
+        window.location.href = 'principal.html';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     const iconMenuMobile = document.getElementById('iconMenuMobile');
     const span1 = document.getElementById('span1');
@@ -17,11 +34,16 @@ document.addEventListener('DOMContentLoaded', function(){
         iconMenuMobile.style.width = '160px';
         span1.textContent = 'Iniciar sesión';
         span2.textContent = 'Registrarse';
+        span3.textContent = 'INICIAR SESIÓN';
+        span4.textContent = 'REGISTRARSE';
     } else{
         iconMenuMobile.style.width = '228px';
         span1.textContent = 'Actualizar contraseña';
         span2.textContent = 'Cerrar sesión';
         span2.style.color = 'red';
+        span3.textContent = 'ACTUALIZAR CONTRASEÑA';
+        span4.textContent = 'CERRAR SESIÓN';
+        span4.style.color = 'red';
     }
 
     span1.addEventListener('click', function(event) {
