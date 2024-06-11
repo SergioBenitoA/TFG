@@ -11,6 +11,13 @@ export function cambiarIdiomaNavFooter(idioma) {
             document.getElementById('alojamientosPC').textContent = 'ACCOMMODATIONS';
             document.getElementById('instalacionesPC').textContent = 'FACILITIES';
             document.getElementById('reservasPC').textContent = 'BOOKINGS';
+            if (localStorage.getItem("correo") == "") {
+                document.getElementById('span1').textContent = 'LOG IN';
+                document.getElementById('span2').textContent = 'SIGN IN';
+            } else{
+                document.getElementById('span1').textContent = 'UPDATE PASSWORD';
+                document.getElementById('span2').textContent = 'LOG OUT';
+            }
 
             /* FOOTER */
             document.getElementById('contactoPC').textContent = 'CONTACT';
@@ -30,6 +37,13 @@ export function cambiarIdiomaNavFooter(idioma) {
             document.getElementById('alojamientosPC').textContent = 'ALOJAMIENTOS';
             document.getElementById('instalacionesPC').textContent = 'INSTALACIONES';
             document.getElementById('reservasPC').textContent = 'RESERVAS';
+            if (localStorage.getItem("correo") == "") {
+                document.getElementById('span1').textContent = 'INICIAR SESIÓN';
+                document.getElementById('span2').textContent = 'REGISTRARSE';
+            } else{
+                document.getElementById('span1').textContent = 'ACTUALIZAR CONTRASEÑA';
+                document.getElementById('span2').textContent = 'CERRAR SESIÓN';
+            }
 
             /* FOOTER */
             document.getElementById('contactoPC').textContent = 'CONTACTO';

@@ -17,11 +17,22 @@ function iniciarSesion(){
 }
 
 function registrarse(){
+    const idioma = localStorage.getItem("lenguaje");
     if (localStorage.getItem("correo") == "") {
         window.location.href = 'registro.html';
     } else {
         localStorage.setItem("correo", "");
-        localStorage.setItem('mensaje', '¡Hasta pronto!');
+        switch (idioma) {
+            case 'EN':
+                localStorage.setItem('mensaje', '¡See you soon!');
+                break;
+            case 'ES':
+                localStorage.setItem('mensaje', '¡Hasta pronto!');
+                break;
+        
+            default:
+                break;
+        }
         localStorage.setItem('showToast', 'true');
                 
         window.location.href = 'principal.html';

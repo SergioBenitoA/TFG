@@ -1,5 +1,2 @@
-- Traducir mensajes
-- Confirmacion para eliminar cuenta
 - PDF reservas
-
 - Documentacion
