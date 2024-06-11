@@ -17,6 +17,8 @@ const labelPersonas = document.getElementById('labelPersonas');
 const labelFechaEntrada = document.getElementById('labelFechaEntrada');
 const labelFechaSalida = document.getElementById('labelFechaSalida');
 const btnReservar = document.getElementById('btnReservar');
+const tipoAlojamiento = document.getElementById('tipo-alojamiento');
+const parcela = document.getElementById('parcela');
 
 // Toggle lista idiomas
 idiomaActual.addEventListener('click', () => {
@@ -39,12 +41,13 @@ function establecerIdioma(idioma) {
     switch (idioma) {
         case 'EN':
             reservaTitulo.textContent = 'Reservation Details';
-            labelDNI.textContent = 'ID/NIE';
-            labelMatricula.textContent = 'Vehicle License Plate';
+            labelMatricula.textContent = 'Vehicle Registration';
             labelPersonas.textContent = 'Number of People';
             labelFechaEntrada.textContent = 'Check-in Date';
             labelFechaSalida.textContent = 'Check-out Date';
             btnReservar.textContent = 'Book';
+            tipoAlojamiento.textContent = 'Type of accommodations';
+            parcela.textContent = 'Pitches';
             break;
 
         case 'ES':
@@ -55,6 +58,8 @@ function establecerIdioma(idioma) {
             labelFechaEntrada.textContent = 'Fecha de entrada';
             labelFechaSalida.textContent = 'Fecha de salida';
             btnReservar.textContent = 'Reservar';
+            tipoAlojamiento.textContent = 'Tipo de alojamiento';
+            parcela.textContent = 'Parcelas';
             break;
     
         default:

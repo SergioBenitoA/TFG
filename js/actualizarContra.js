@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
+    const idioma = localStorage.getItem("lenguaje");
+
     btnActualizarContrasena.addEventListener('click', async (event) => {
         event.preventDefault();
         const floatingPassword1 = document.getElementById('floatingPassword1').value;
@@ -46,30 +48,80 @@ document.addEventListener('DOMContentLoaded', () => {
                     const actualizada = await actualizarContrasena(email, floatingPassword2);
                     if(actualizada.Message){
                         localStorage.setItem("correo", email);
-                        localStorage.setItem('mensaje', 'Contraseña actualizada con éxito');
+                        switch (idioma) {
+                            case 'EN':
+                                localStorage.setItem('mensaje', 'Password successfully updated');
+                                break;
+                            case 'ES':
+                                localStorage.setItem('mensaje', 'Contraseña actualizada con éxito');
+                                break;
+                        
+                            default:
+                                break;
+                        }
                         localStorage.setItem('showToast', 'true');
 
                         window.location.href = 'principal.html';
                     } else{
-                        mensaje.textContent = 'No se ha podido actualizar la contraseña';
+                        switch (idioma) {
+                            case 'EN':
+                                mensaje.textContent = 'The password could not be updated';
+                                break;
+                            case 'ES':
+                                mensaje.textContent = 'No se ha podido actualizar la contraseña';
+                                break;
+                        
+                            default:
+                                break;
+                        }
                         const toastLiveExample = document.getElementById('liveToast');
                         const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                         toastBootstrap.show();
                     }
                 } else{
-                    mensaje.textContent = 'La contraseña no es correcta';
+                    switch (idioma) {
+                        case 'EN':
+                            mensaje.textContent = 'The password is incorrect';
+                            break;
+                        case 'ES':
+                            mensaje.textContent = 'La contraseña no es correcta';
+                            break;
+                    
+                        default:
+                            break;
+                    }
                     const toastLiveExample = document.getElementById('liveToast');
                     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                     toastBootstrap.show();
                 }
             } else{
-                mensaje.textContent = 'Las contraseñas no coinciden';
+                switch (idioma) {
+                    case 'EN':
+                        mensaje.textContent = 'The passwords do not match';
+                        break;
+                    case 'ES':
+                        mensaje.textContent = 'Las contraseñas no coinciden';
+                        break;
+                
+                    default:
+                        break;
+                }
                 const toastLiveExample = document.getElementById('liveToast');
                 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                 toastBootstrap.show();
             }
         } else {
-            mensaje.textContent = 'Por favor, rellene todos los campos.';
+            switch (idioma) {
+                case 'EN':
+                    mensaje.textContent = 'Please fill in all the fields';
+                    break;
+                case 'ES':
+                    mensaje.textContent = 'Por favor, rellene todos los campos';
+                    break;
+            
+                default:
+                    break;
+            }
             const toastLiveExample = document.getElementById('liveToast');
             const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
             toastBootstrap.show();

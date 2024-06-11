@@ -1,8 +1,14 @@
-#eliminarCuenta{
+#eliminar{
     color: #5D997C; 
     cursor: pointer;
 }
 
-#eliminarCuenta:hover {
+#eliminar:hover {
     text-decoration: underline;
+}
+
+#eliminarCuenta{
+    background-color: #5D997C; 
+    border-color: #5D997C; 
+    color: white;
 }

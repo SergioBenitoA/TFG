@@ -109,7 +109,7 @@
               </div>
               
               <div style="text-align: center;">
-                <a id="eliminarCuenta">Eliminar cuenta</a>
+                <a id="eliminar" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar cuenta</a>
               </div>
             </form>
           </div>
@@ -161,26 +161,24 @@
         </div>
 
         <!-- Vertically centered modal -->
-          <!-- <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+        <div class="modal fade" id="modalEliminar" data-bs-backdrop="static">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="tituloModal" class="modal-title">Eliminar cuenta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p id="textoModal">¿Estas seguro de que quieres eliminar la cuenta?</p>
+              </div>
+              <div class="modal-footer">
+                <button id="cancelarModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="eliminarCuenta">Eliminar</button>
               </div>
             </div>
           </div>
-
-          <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button> -->
-
+        </div>
+          
   <script src="../js/principal.js"></script>
   <script src="../js/traductor/traductorActualizar.js" type="module"></script>
   <script src="../js/actualizarContra.js" type="module"></script>
