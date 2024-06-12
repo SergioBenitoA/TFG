@@ -58,12 +58,6 @@ export const getUsuarios = async () => {
     return response
 }
 
-export const getReservas = async () => {
-    const sendata = await fetch('http://localhost:3000/user/reservas')
-    const response = await sendata.json()
-    return response
-}
-
 export const comprobarUsuario = async (correo, contrasena) => {
     const data = 
     {
