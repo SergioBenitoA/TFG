@@ -14,9 +14,13 @@ export function cambiarIdiomaNavFooter(idioma) {
             if (localStorage.getItem("correo") == "") {
                 document.getElementById('span1').textContent = 'LOG IN';
                 document.getElementById('span2').textContent = 'SIGN IN';
+                document.getElementById('span3').textContent = 'LOG IN';
+                document.getElementById('span4').textContent = 'SIGN IN';
             } else{
                 document.getElementById('span1').textContent = 'UPDATE PASSWORD';
                 document.getElementById('span2').textContent = 'LOG OUT';
+                document.getElementById('span3').textContent = 'UPDATE PASSWORD';
+                document.getElementById('span4').textContent = 'LOG OUT';
             }
 
             /* FOOTER */

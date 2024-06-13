@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const usuarioEliminado = await deleteUsuario(correo);
         if (usuarioEliminado.Message) {
-            // myModal.addEventListener('shown.bs.modal', () => {
-            //     myInput.focus()
-            // })
             localStorage.setItem("correo", "");
             localStorage.setItem('mensaje', 'Su cuenta se ha eliminado correctamente');
             localStorage.setItem('showToast', 'true');

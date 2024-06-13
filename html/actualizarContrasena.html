@@ -37,12 +37,6 @@
                 <li class="opcion" onclick=hideSidebar()><a href="#"><span>EN</span></a></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <ul class="dropdown-menu icon-menu" id="iconMenu">
-                <li class="menu-option"><a href="login.html"><span>Iniciar sesión</span></a></li>
-                <li class="menu-option"><a href="registro.html"><span>Registrarse</span></a></li>
-            </ul>
-          </li>
           <li><a id="iniciarMobile" onclick="iniciarSesion();" href="#"><span id="span3">INICIAR SESIÓN</span></a></li>
           <li><a id="registrarseMobile" onclick="registrarse();" href="#"><span id="span4">REGISTRARSE</span></a></li>
         </ul>
@@ -77,7 +71,7 @@
         </ul>
       </nav>
         <div class="spaceBet"></div>
-        <main class="form-signin w-100 m-auto d-flex justify-content-center align-items-center">
+        <main onclick="hideSidebar()" class="form-signin w-100 m-auto d-flex justify-content-center align-items-center">
           <div>
             <form style="width: 350px; background: white; padding: 2rem; border-radius: 10px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
               <h1 class="h3 mb-3 fw-normal text-center" id="actualizar">Por favor, actualice la contraseña</h1>

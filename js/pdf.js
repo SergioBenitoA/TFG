@@ -17,73 +17,80 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dni && matricula && personas && fechaEntrada && fechaSalida && alojamiento) {
             const resultado = validarReserva(dni, personas, fechaEntrada, fechaSalida);
             if (resultado.valido) {
-                const usuario = await getUsuarioCorreo(correo);
-                if(usuario){
-                    // CODIGO PARA COMPROBAR SI EN LA FECHA QUE QUIERE RESERVAR YA TIENE UNA RESERVA
-                    const reservas = await getReservasUsuario(usuario.id_usuario);
+                if(correo !== ""){
+                    const usuario = await getUsuarioCorreo(correo);
+                    if(usuario){
+                        // CODIGO PARA COMPROBAR SI EN LA FECHA QUE QUIERE RESERVAR YA TIENE UNA RESERVA
+                        const reservas = await getReservasUsuario(usuario.id_usuario);
 
-                    // Función para comprobar si las fechas se solapan
-                    function fechasSolapadas(fechaEntradaExistente, fechaSalidaExistente, fechaEntradaNueva, fechaSalidaNueva) {
-                        return !(fechaSalidaNueva < fechaEntradaExistente || fechaEntradaNueva > fechaSalidaExistente);
-                    }
-
-                    // Comprobar si alguna de las reservas se solapa con la nueva
-                    let solapada = false;
-                    for (let reserva of reservas) {
-                        const { fecha_entrada, fecha_salida } = reserva;
-                        if (fechasSolapadas(new Date(fecha_entrada), new Date(fecha_salida), new Date(fechaEntrada), new Date(fechaSalida))) {
-                            solapada = true;
-                            break;
+                        // Función para comprobar si las fechas se solapan
+                        function fechasSolapadas(fechaEntradaExistente, fechaSalidaExistente, fechaEntradaNueva, fechaSalidaNueva) {
+                            return !(fechaSalidaNueva < fechaEntradaExistente || fechaEntradaNueva > fechaSalidaExistente);
                         }
-                    }
 
-                    if (solapada) {
-                        switch (idioma) {
-                            case 'EN':
-                                mensaje.textContent = 'You already have a reservation in that date range.';
+                        // Comprobar si alguna de las reservas se solapa con la nueva
+                        let solapada = false;
+                        for (let reserva of reservas) {
+                            const { fecha_entrada, fecha_salida } = reserva;
+                            if (fechasSolapadas(new Date(fecha_entrada), new Date(fecha_salida), new Date(fechaEntrada), new Date(fechaSalida))) {
+                                solapada = true;
                                 break;
-                            case 'ES':
-                                mensaje.textContent = 'Ya tiene una reserva en ese intervalo de fechas.';
-                                break;
-                        
-                            default:
-                                break;
+                            }
                         }
-                        const toastLiveExample = document.getElementById('liveToast');
-                        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-                        toastBootstrap.show();
-                    } else {
-                        // Crear la nueva reserva si no hay solapamiento
-                        const reserva = await crearReserva(123, dni, matricula, personas, fechaEntrada, fechaSalida, usuario.id_usuario, alojamiento);
-                        if(reserva.Message){
-                            generatePDF(usuario.nombre, usuario.correo, usuario.telefono, dni, matricula, fechaEntrada, fechaSalida, personas, alojamiento);
-                        } else {
+
+                        if (solapada) {
                             switch (idioma) {
                                 case 'EN':
-                                    mensaje.textContent = 'Error creating booking';
+                                    mensaje.textContent = 'You already have a reservation in that date range.';
                                     break;
                                 case 'ES':
-                                    mensaje.textContent = 'Error al crear la reserva';
+                                    mensaje.textContent = 'Ya tiene una reserva en ese intervalo de fechas.';
                                     break;
+                            
                                 default:
                                     break;
                             }
                             const toastLiveExample = document.getElementById('liveToast');
                             const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                             toastBootstrap.show();
+                        } else {
+                            // Crear la nueva reserva si no hay solapamiento
+                            const reserva = await crearReserva(123, dni, matricula, personas, fechaEntrada, fechaSalida, usuario.id_usuario, alojamiento);
+                            if(reserva.Message){
+                                generatePDF(usuario.nombre, usuario.correo, usuario.telefono, dni, matricula, fechaEntrada, fechaSalida, personas, alojamiento);
+                            } else {
+                                switch (idioma) {
+                                    case 'EN':
+                                        mensaje.textContent = 'Error creating booking';
+                                        break;
+                                    case 'ES':
+                                        mensaje.textContent = 'Error al crear la reserva';
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                const toastLiveExample = document.getElementById('liveToast');
+                                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                                toastBootstrap.show();
+                            }
+                        }                    
+                    } else{
+                        switch (idioma) {
+                            case 'EN':
+                                mensaje.textContent = 'You must create an account in order to make a reservation';
+                                break;
+                            case 'ES':
+                                mensaje.textContent = 'Debes crearte una cuenta para poder hacer una reserva';
+                                break;
+                            default:
+                                break;
                         }
-                    }                    
-                } else{
-                    switch (idioma) {
-                        case 'EN':
-                            mensaje.textContent = 'You must create an account in order to make a reservation';
-                            break;
-                        case 'ES':
-                            mensaje.textContent = 'Debes crearte una cuenta para poder hacer una reserva';
-                            break;
-                        default:
-                            break;
+                        const toastLiveExample = document.getElementById('liveToast');
+                        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                        toastBootstrap.show();
                     }
+                } else{
+                    mensaje.textContent = 'Debe iniciar sesión para poder hacer una reserva';
                     const toastLiveExample = document.getElementById('liveToast');
                     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
                     toastBootstrap.show();
