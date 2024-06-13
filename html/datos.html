@@ -34,16 +34,16 @@
     <nav class="z999">
       <!-- PARA MOVIL -->
       <ul class="sidebar">
-        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li onclick=hideSidebar()><a href="#" id="desplazarDerecha"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5D997C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         <li><a id="alojamientosMobile" href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
         <li><a id="instalacionesMobile" href="principal.html#instalaciones">INSTALACIONES</a></li>
         <li><a id="reservasMobile" href="reservas.html">RESERVAS</a></li>
-        <li><a id="contactoMobile" href="#contacto">CONTACTO</a></li>
+        <li onclick=hideSidebar()><a id="contactoMobile" href="#contacto">CONTACTO</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle idioma" id="idiomaMobile">ES</a>
           <ul class="dropdown-menu idiomas" id="idiomas">
-              <li class="opcion"><a href="#"><span>ES</span></a></li>
-              <li class="opcion"><a href="#"><span>EN</span></a></li>
+              <li class="opcion" onclick=hideSidebar()><a href="#"><span>ES</span></a></li>
+              <li class="opcion" onclick=hideSidebar()><a href="#"><span>EN</span></a></li>
           </ul>
         </li>
         <li><a id="iniciarMobile" onclick="iniciarSesion();" href="#"><span id="span3">INICIAR SESIÓN</span></a></li>
@@ -53,7 +53,7 @@
     <!-- PARA PC -->
     <nav>
       <ul>
-        <li><a href="index.html" class="logo-hover"><img src="../imagenes/logosinfondo.png" class="log" alt="Logo EL OASIS"></a></li>
+        <li><a href="../index.html" class="logo-hover"><img src="../imagenes/logosinfondo.png" class="log" alt="Logo EL OASIS"></a></li>
         <li class="hideOnMobile"><a id="alojamientosPC" href="principal.html#alojamientos">ALOJAMIENTOS</a></li>
         <li class="hideOnMobile"><a id="instalacionesPC" href="principal.html#instalaciones">INSTALACIONES</a></li>
         <li class="hideOnMobile"><a id="reservasPC" href="reservas.html">RESERVAS</a></li>
@@ -165,7 +165,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body" id="mensaje">
-      Ha habido un problema al crear la cuenta
+      Ha habido un problema al crear la reserva
     </div>
   </div>
 </div>

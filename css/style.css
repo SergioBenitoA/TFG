@@ -60,11 +60,13 @@ main{
   font-size: 16px; /* Tamaño del texto */
   cursor: pointer; /* Cambia el cursor al pasar por encima */
   transition: all 0.3s ease; /* Transición suave */
+  text-decoration: none;
 }
 
 .transparent-button:hover {
   background-color: white; /* Cambia el color de fondo al pasar el cursor */
   color: black; /* Cambia el color del texto al pasar el cursor */
+  text-decoration: none;
 }
 
 .white-text{

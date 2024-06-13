@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailInput = document.getElementById('floatingInput').value;
         const passwordInput = document.getElementById('floatingPassword').value;
         const mensaje = document.getElementById('mensaje');
+        debugger;
 
         if (emailInput && passwordInput) {
             const usuarios = await comprobarUsuario(emailInput, passwordInput);
