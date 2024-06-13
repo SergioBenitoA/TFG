@@ -7,7 +7,7 @@ export const crearUsuario = async (nombre, correo, telefono, contrasena) => {
         "contrasena_nc" : contrasena
     }
     const sendata = await fetch(
-        'http://localhost:3000/user/userssergio',
+        'apitfg-production-5e77.up.railway.app/user/userssergio',
         {
             method: 'POST',
             headers: {
@@ -37,7 +37,7 @@ export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrad
     }
 
     const sendata = await fetch(
-        'http://localhost:3000/user/reservas',
+        'apitfg-production-5e77.up.railway.app/user/reservas',
         {
             method: 'POST',
             headers: {
@@ -53,7 +53,7 @@ export const crearReserva = async (codigo, dni, matricula, personas, fechaEntrad
 }
 
 export const getUsuarios = async () => {
-    const sendata = await fetch('http://localhost:3000/user/userssergio')
+    const sendata = await fetch('apitfg-production-5e77.up.railway.app/user/userssergio')
     const response = await sendata.json()
     return response
 }
@@ -65,7 +65,7 @@ export const comprobarUsuario = async (correo, contrasena) => {
         "password" : contrasena
     }
     const sendata = await fetch(
-        'http://localhost:3000/user/loginsergio',
+        'apitfg-production-5e77.up.railway.app/user/loginsergio',
         {
             method: 'POST',
             headers: {
@@ -87,7 +87,7 @@ export async function comprobarUsuarioActualizar (correo, contrasena){
         "password" : contrasena
     }
     const sendata = await fetch(
-        'http://localhost:3000/user/loginsergio',
+        'apitfg-production-5e77.up.railway.app/user/loginsergio',
         {
             method: 'POST',
             headers: {
@@ -104,7 +104,7 @@ export async function comprobarUsuarioActualizar (correo, contrasena){
 
 
 export async function getUsuarioCorreo(email) {
-    const url = `http://localhost:3000/user/obtenerusuario/${email}`;
+    const url = `apitfg-production-5e77.up.railway.app/user/obtenerusuario/${email}`;
     
     try {
         // Realizar la solicitud Fetch
@@ -129,7 +129,7 @@ export async function getUsuarioCorreo(email) {
 }
 
 export async function getReservasUsuario(idusuario) {
-    const url = `http://localhost:3000/user/obtenerreservas/${idusuario}`;
+    const url = `apitfg-production-5e77.up.railway.app/user/obtenerreservas/${idusuario}`;
     
     try {
         // Realizar la solicitud Fetch
@@ -160,7 +160,7 @@ export const actualizarContrasena = async (email, newPassword) => {
         "newPassword": newPassword
     };
     const sendata = await fetch(
-        'http://localhost:3000/user/actualizarContrasena',
+        'apitfg-production-5e77.up.railway.app/user/actualizarContrasena',
         {
             method: 'PUT',
             headers: {
@@ -175,7 +175,7 @@ export const actualizarContrasena = async (email, newPassword) => {
 };
 
 export const deleteUsuario = async (correo) => {
-    const response = await fetch(`http://localhost:3000/user/usuariossergio/${correo}`, {
+    const response = await fetch(`apitfg-production-5e77.up.railway.app/user/usuariossergio/${correo}`, {
         method: 'DELETE'
     })
 
@@ -187,7 +187,7 @@ export const deleteUsuario = async (correo) => {
 export const deleteReserva = async (id) => {
 
     const sendata = await fetch(
-        `http://localhost:3000/user/reserva/${id}`,
+        `apitfg-production-5e77.up.railway.app/user/reserva/${id}`,
         {
             method: 'DELETE'
         }
