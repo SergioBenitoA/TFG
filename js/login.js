@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const usuarios = await comprobarUsuario(emailInput, passwordInput);
             if(usuarios.Message){
                 localStorage.setItem("correo", emailInput);
+                debugger;
                 switch (idioma) {
                     case 'EN':
                         localStorage.setItem('mensaje', 'Welcome to EL OASIS!');

@@ -128,6 +128,31 @@ export async function getUsuarioCorreo(email) {
     }
 }
 
+export async function getReservasUsuario(idusuario) {
+    const url = `http://localhost:3000/user/obtenerreservas/${idusuario}`;
+    
+    try {
+        // Realizar la solicitud Fetch
+        const response = await fetch(url);
+        
+        // Verificar si la solicitud fue exitosa
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.statusText}`);
+        }
+        
+        // Convertir la respuesta a JSON
+        const data = await response.json();
+        
+        // Retornar los datos del usuario
+        return data;
+        
+    } catch (error) {
+        // Manejar errores
+        console.error('Hubo un problema con la solicitud Fetch:', error);
+        throw error;
+    }
+}
+
 // Actualizar contraseña
 export const actualizarContrasena = async (email, newPassword) => {
     const data = {

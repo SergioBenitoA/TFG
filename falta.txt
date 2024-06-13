@@ -1,6 +1,0 @@
-- PDF reservas
-- Que no pueda coger dos reservas en la misma fecha
-- 2.1
-- 2.3   
-
-- Documentacion
