@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(correo !== ""){
                     const usuario = await getUsuarioCorreo(correo);
                     if(usuario){
-                        // CODIGO PARA COMPROBAR SI EN LA FECHA QUE QUIERE RESERVAR YA TIENE UNA RESERVA
+                        // Se obtienen todas las reservas de ese usuario para comprobar si coinciden las fechas
                         const reservas = await getReservasUsuario(usuario.id_usuario);
 
                         // Función para comprobar si las fechas se solapan
@@ -271,4 +271,3 @@ async function generatePDF(nombre, email, telefono, dni, matricula, fechaEntrada
 
     pdfMake.createPdf(docDefinition).download('reserva.pdf');
 }
-

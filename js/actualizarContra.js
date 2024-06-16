@@ -2,9 +2,6 @@ import { comprobarUsuarioActualizar, deleteUsuario, actualizarContrasena } from 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // const myModal = document.getElementById('myModal')
-    // const myInput = document.getElementById('myInput')
-
     const btnActualizarContrasena = document.getElementById('btnActualizarContrasena');
     const eliminarCuenta = document.getElementById('eliminarCuenta');
     const mensaje = document.getElementById('mensaje');

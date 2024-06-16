@@ -74,6 +74,7 @@ nav li:first-child {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 a svg {
   margin-left: auto;
 }
@@ -94,7 +95,7 @@ a svg {
 .sidebar a {
   width: 100%;
   padding: 15px;
-  display: block; /* Makes it easier to tap on mobile */
+  display: block;
 }
 
 .menuBoton {
@@ -162,7 +163,6 @@ a svg {
   display: flex;
 }
 
-/* Dropdown Styles */
 .dropdown .dropdown-menu {
   display: none;
   position: absolute;
@@ -189,7 +189,7 @@ a svg {
 
 @media (max-width: 925px) {
   .dropdown-menu {
-      position: static; /* Static position in sidebar for mobile */
-      background-color: rgba(255, 255, 255, 0.2); /* Transparent background for mobile dropdown menu */
+      position: static;
+      background-color: rgba(255, 255, 255, 0.2);
   }
 }

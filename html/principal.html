@@ -72,207 +72,205 @@
         </ul>
       </nav>
 
-        <main onclick="hideSidebar()">
-            <!-- DESLIZADOR DE IMAGENES -->
-            <div class="">
-              <div class="spaceBet"></div>
-              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="../imagenes/imagen1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 1">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../imagenes/imagen3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../imagenes/imagen4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 3">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+      <main onclick="hideSidebar()">
+        <!-- DESLIZADOR DE IMAGENES -->
+        <div class="">
+          <div class="spaceBet"></div>
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="4000">
+                <img src="../imagenes/imagen1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 1">
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="../imagenes/imagen3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/imagen4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 3">
               </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
             
             
-            <!-- TEXTO + RESERVA YA -->
-<div class="reservarYa d-flex cardAlojamientos">
-  <div class="texto">
-      <h5 class="text-instalaciones" id="descuento">15% de descuento en tu primer registro</h5>
-      <br>
-      <h5 class="text-instalaciones" id="experiencia">
-          Sumérgete en la experiencia definitiva para los amantes del surf y
-          la vida al aire libre. En El Oasis, te ofrecemos una combinación única
-          de olas perfectas, un ambiente relajado a pie de playa, y 
-          momentos inolvidables de diversión. Desde nuestras clases de surf hasta nuestras noches de karaoke bajo las
-          estrellas, tenemos todo lo que necesitas para unas vacaciones
-          memorables. ¡Bienvenido a tu nuevo destino favorito!
-      </h5>
-  </div>
-  <div class="btnReserva">
-      <a class="reserva" href="reservas.html" style="color: black; width: 100%; height: 100%; text-decoration: none;" id="btnReservaYa">¡RESERVA YA!</a>
-  </div>
-  <hr/>
-</div>
-
-<!-- ALOJAMIENTOS -->
-<div id="alojamientos" class="pricing-header p-3 pb-md-4 mx-auto text-center contenedor">
-  <h1 class="display-4 fw-normal text-body-emphasis" id="tituloAlojamientos">ALOJAMIENTOS</h1>
-</div>
-
-<div class="cardAlojamientos gap-5 justify-content-around div-card">
-  <div class="card">
-      <img src="../imagenes/parcela.png" class="card-img-top" alt="...">
-      <div class="card-body">
-          <h5 class="card-title" id="tituloParcelas">Parcelas</h5>
-          <p class="card-text" id="descripcionParcelas">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
-          <a href="reservas.html" class="btn-card" id="btnReservarParcelas">Reservar</a>
-      </div>
-  </div>
-  <div class="card">
-      <img src="../imagenes/glamping.png" class="card-img-top" alt="...">
-      <div class="card-body">
-          <h5 class="card-title" id="tituloGlamping">Glamping</h5>
-          <p class="card-text" id="descripcionGlamping">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
-          <a href="reservas.html" class="btn-card" id="btnReservarGlamping">Reservar</a>
-      </div>
-  </div>
-  <div class="card">
-      <img src="../imagenes/bungalow.png" class="card-img-top" alt="...">
-      <div class="card-body">
-          <h5 class="card-title" id="tituloBungalows">Bungalows</h5>
-          <p class="card-text" id="descripcionBungalows">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
-          <a href="reservas.html" class="btn-card" id="btnReservarBungalows">Reservar</a>
-      </div>
-  </div>
-</div>
-
-<!-- INSTALACIONES -->
-<div id="instalaciones" class="fondoVerde">
-  <div class="container marketing">
-      <hr/>
-      <!-- START THE FEATURETTES -->
-      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-          <h1 class="display-4 fw-normal text-body-emphasis"><p class="white-text" id="tituloInstalaciones">INSTALACIONES</p></h1>
-      </div>
-
-      <div class="row featurette">
-          <div class="col-md-7">
-              <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloPiscina">Piscina</h2>
-              <p class="text-instalaciones lead" id="descripcionPiscina">Disfruta del frescor de nuestra piscina al aire libre, ideal para relajarse o divertirse en familia. Rodeada de vistas naturales, es el lugar perfecto para un día soleado de descanso y esparcimiento.</p>
+        <!-- TEXTO + RESERVA YA -->
+        <div class="reservarYa d-flex cardAlojamientos">
+          <div class="texto">
+              <h5 class="text-instalaciones" id="descuento">15% de descuento en tu primer registro</h5>
+              <br>
+              <h5 class="text-instalaciones" id="experiencia">
+                  Sumérgete en la experiencia definitiva para los amantes del surf y
+                  la vida al aire libre. En El Oasis, te ofrecemos una combinación única
+                  de olas perfectas, un ambiente relajado a pie de playa, y 
+                  momentos inolvidables de diversión. Desde nuestras clases de surf hasta nuestras noches de karaoke bajo las
+                  estrellas, tenemos todo lo que necesitas para unas vacaciones
+                  memorables. ¡Bienvenido a tu nuevo destino favorito!
+              </h5>
           </div>
-          <div class="col-md-5">
-              <img class="img500" src="../imagenes/piscina.jpg">
+          <div class="btnReserva">
+              <a class="reserva" href="reservas.html" style="color: black; width: 100%; height: 100%; text-decoration: none;" id="btnReservaYa">¡RESERVA YA!</a>
           </div>
-      </div>
+          <hr/>
+        </div>
 
-      <hr class="featurette-divider">
+        <!-- ALOJAMIENTOS -->
+        <div id="alojamientos" class="pricing-header p-3 pb-md-4 mx-auto text-center contenedor">
+          <h1 class="display-4 fw-normal text-body-emphasis" id="tituloAlojamientos">ALOJAMIENTOS</h1>
+        </div>
 
-      <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-              <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloBBQ">Zona de barbacoas</h2>
-              <p class="text-instalaciones lead" id="descripcionBBQ">Reúnete con amigos y familia en nuestra zona de barbacoas, completamente equipada para que prepares deliciosas comidas al aire libre. Un espacio acogedor y perfecto para compartir momentos especiales mientras disfrutas del entorno natural.</p>
+        <div class="cardAlojamientos gap-5 justify-content-around div-card">
+          <div class="card">
+              <img src="../imagenes/parcela.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title" id="tituloParcelas">Parcelas</h5>
+                  <p class="card-text" id="descripcionParcelas">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
+                  <a href="reservas.html" class="btn-card" id="btnReservarParcelas">Reservar</a>
+              </div>
           </div>
-          <div class="col-md-5 order-md-1">
-              <img class="img500" src="../imagenes/bbq.jpg">
+          <div class="card">
+              <img src="../imagenes/glamping.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title" id="tituloGlamping">Glamping</h5>
+                  <p class="card-text" id="descripcionGlamping">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
+                  <a href="reservas.html" class="btn-card" id="btnReservarGlamping">Reservar</a>
+              </div>
           </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-          <div class="col-md-7">
-              <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloParque">Parque Infantil</h2>
-              <p class="text-instalaciones lead" id="descripcionParque">Un espacio seguro y divertido para los más pequeños, nuestro parque infantil está diseñado para estimular la imaginación y la actividad física en un entorno al aire libre. Es el lugar ideal para que los niños jueguen, exploren y hagan nuevos amigos durante su estancia.</p>
+          <div class="card">
+              <img src="../imagenes/bungalow.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title" id="tituloBungalows">Bungalows</h5>
+                  <p class="card-text" id="descripcionBungalows">Alojamientos como un hotel. Llegar y disfrutar. Pero contando con la naturaleza y la experiencia surfista.</p>
+                  <a href="reservas.html" class="btn-card" id="btnReservarBungalows">Reservar</a>
+              </div>
           </div>
-          <div class="col-md-5">
-              <img class="img500" src="../imagenes/parque.jpg">
+        </div>
+
+        <!-- INSTALACIONES -->
+        <div id="instalaciones" class="fondoVerde">
+          <div class="container marketing">
+              <hr/>
+              <!-- START THE FEATURETTES -->
+              <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                  <h1 class="display-4 fw-normal text-body-emphasis"><p class="white-text" id="tituloInstalaciones">INSTALACIONES</p></h1>
+              </div>
+
+              <div class="row featurette">
+                  <div class="col-md-7">
+                      <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloPiscina">Piscina</h2>
+                      <p class="text-instalaciones lead" id="descripcionPiscina">Disfruta del frescor de nuestra piscina al aire libre, ideal para relajarse o divertirse en familia. Rodeada de vistas naturales, es el lugar perfecto para un día soleado de descanso y esparcimiento.</p>
+                  </div>
+                  <div class="col-md-5">
+                      <img class="img500" src="../imagenes/piscina.jpg">
+                  </div>
+              </div>
+
+              <hr class="featurette-divider">
+
+              <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                      <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloBBQ">Zona de barbacoas</h2>
+                      <p class="text-instalaciones lead" id="descripcionBBQ">Reúnete con amigos y familia en nuestra zona de barbacoas, completamente equipada para que prepares deliciosas comidas al aire libre. Un espacio acogedor y perfecto para compartir momentos especiales mientras disfrutas del entorno natural.</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                      <img class="img500" src="../imagenes/bbq.jpg">
+                  </div>
+              </div>
+
+              <hr class="featurette-divider">
+
+              <div class="row featurette">
+                  <div class="col-md-7">
+                      <h2 class="text-instalaciones featurette-heading fw-normal lh-1" id="tituloParque">Parque Infantil</h2>
+                      <p class="text-instalaciones lead" id="descripcionParque">Un espacio seguro y divertido para los más pequeños, nuestro parque infantil está diseñado para estimular la imaginación y la actividad física en un entorno al aire libre. Es el lugar ideal para que los niños jueguen, exploren y hagan nuevos amigos durante su estancia.</p>
+                  </div>
+                  <div class="col-md-5">
+                      <img class="img500" src="../imagenes/parque.jpg">
+                  </div>
+              </div>
+
+              <hr class="featurette-divider">
           </div>
-      </div>
+        </div>
 
-      <hr class="featurette-divider">
-  </div>
-</div>
+        <!-- /END THE FEATURETTES -->
+        <div class="container marketing">
+          <hr/>
 
-<!-- /END THE FEATURETTES -->
-<div class="container marketing">
-  <hr/>
-
-  <!-- Three columns of text below the carousel -->
-  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis" id="tituloOpiniones">OPINIONES</h1>
-  </div>
-  <div class="row">
-      <div class="col-lg-4">
-          <img src="../imagenes/persona1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
-          <h2 class="fw-normal" id="nombreLaura">Laura Gómez</h2>
-          <p id="opinionLaura">"Nuestra estancia en el camping fue maravillosa. Los niños disfrutaron mucho del parque infantil y la zona de barbacoas fue perfecta para las noches de verano. ¡Definitivamente volveremos!"</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-          <img src="../imagenes/persona3.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
-          <h2 class="fw-normal" id="nombreCarlos">Carlos Martín</h2>
-          <p id="opinionCarlos">"Excelente camping con instalaciones limpias y bien mantenidas. La piscina es amplia y siempre en perfectas condiciones. El ambiente es muy familiar y tranquilo, ideal para desconectar."</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-          <img src="../imagenes/persona2.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
-          <h2 class="fw-normal" id="nombreSofia">Sofía Ramírez</h2>
-          <p id="opinionSofia">"Me encantó el ambiente relajado del camping y la cercanía a la naturaleza. Las instalaciones son modernas y el personal siempre dispuesto a ayudar. Las noches de barbacoa fueron un gran acierto."</p>
-      </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->
-  <hr/>
-  <hr/>
-</div>
-</main>
-
+          <!-- Three columns of text below the carousel -->
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal text-body-emphasis" id="tituloOpiniones">OPINIONES</h1>
+          </div>
+          <div class="row">
+              <div class="col-lg-4">
+                  <img src="../imagenes/persona1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                  <h2 class="fw-normal" id="nombreLaura">Laura Gómez</h2>
+                  <p id="opinionLaura">"Nuestra estancia en el camping fue maravillosa. Los niños disfrutaron mucho del parque infantil y la zona de barbacoas fue perfecta para las noches de verano. ¡Definitivamente volveremos!"</p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                  <img src="../imagenes/persona3.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                  <h2 class="fw-normal" id="nombreCarlos">Carlos Martín</h2>
+                  <p id="opinionCarlos">"Excelente camping con instalaciones limpias y bien mantenidas. La piscina es amplia y siempre en perfectas condiciones. El ambiente es muy familiar y tranquilo, ideal para desconectar."</p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                  <img src="../imagenes/persona2.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                  <h2 class="fw-normal" id="nombreSofia">Sofía Ramírez</h2>
+                  <p id="opinionSofia">"Me encantó el ambiente relajado del camping y la cercanía a la naturaleza. Las instalaciones son modernas y el personal siempre dispuesto a ayudar. Las noches de barbacoa fueron un gran acierto."</p>
+              </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+          <hr/>
+          <hr/>
+        </div>
+      </main>
         
-        <!-- FOOTER -->
-<footer class="pie-pagina">
-  <div class="grupo-1" id="contacto">
-      <div class="box">
-          <figure>
-              <a href="#">
-                  <img src="../imagenes/logosinfondo.png" alt="Logo EL OASIS">
-              </a>
-          </figure>
-      </div>
-      <div class="box">
-          <h2 id="sobreNosotros">SOBRE NOSOTROS</h2>
-          <p>C/ Ribera de Castilla</p>
-          <p>+34 600 000 000</p> 
-          <p>sergy2210@gmail.com</p>
-          <p id="horario">Lunes a Domingo 10:00 - 22:00</p>
-      </div>
-      <div class="box">
-          <h2 id="siguenos">SIGUENOS</h2>
-          <div class="red-social">
-              <a href="https://github.com/SergioBenitoA" class="fa fa-facebook"></a>
-              <a href="https://github.com/SergioBenitoA" class="fa fa-instagram"></a>
-              <a href="https://github.com/SergioBenitoA" class="fa fa-twitter"></a>
+      <!-- FOOTER -->
+      <footer class="pie-pagina">
+        <div class="grupo-1" id="contacto">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../imagenes/logosinfondo.png" alt="Logo EL OASIS">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2 id="sobreNosotros">SOBRE NOSOTROS</h2>
+                <p>C/ Ribera de Castilla</p>
+                <p>+34 600 000 000</p> 
+                <p>sergy2210@gmail.com</p>
+                <p id="horario">Lunes a Domingo 10:00 - 22:00</p>
+            </div>
+            <div class="box">
+                <h2 id="siguenos">SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://github.com/SergioBenitoA" class="fa fa-facebook"></a>
+                    <a href="https://github.com/SergioBenitoA" class="fa fa-instagram"></a>
+                    <a href="https://github.com/SergioBenitoA" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="box" id="map"></div>
+        </div>
+      </footer>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="../imagenes/logosinfondo.png" style="width: 20px; height: 20px;" class="rounded me-2" alt="...">
+            <strong class="me-auto">El Oasis</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
+          <div class="toast-body" id="mensaje">
+            ¡Bienvenido a EL OASIS!
+          </div>
+        </div>
       </div>
-      <div class="box" id="map"></div>
-  </div>
-</footer>
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="../imagenes/logosinfondo.png" style="width: 20px; height: 20px;" class="rounded me-2" alt="...">
-      <strong class="me-auto">El Oasis</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body" id="mensaje">
-      ¡Bienvenido a EL OASIS!
-    </div>
-  </div>
-</div>
-
-
-
+      
   <script src="../js/principal.js"></script>
   <script src="../js/traductor/traductorPrincipal.js" type="module"></script>
   <script>

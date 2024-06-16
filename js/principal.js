@@ -29,7 +29,6 @@ function registrarse(){
             case 'ES':
                 localStorage.setItem('mensaje', '¡Hasta pronto!');
                 break;
-        
             default:
                 break;
         }
@@ -121,18 +120,6 @@ document.addEventListener('DOMContentLoaded', function(){
            closeAllDropdowns();
        }
    }, true);
-
-   // CERRAR SESIÓN
-   // Selecciona el botón por su ID
-    const cerrarSesion = document.getElementById('cerrarSesion');
-
-    // Agrega un controlador de eventos para el clic
-    // cerrarSesion.addEventListener('click', function() {
-    //     localStorage.setItem('correo', '');
-    //     // CAMBIAR ICONO
-    // });
-
-
 });
 
 var map = L.map('map').setView([ 41.664899, -4.72382], 13);

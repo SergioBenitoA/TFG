@@ -26,8 +26,9 @@ idiomaActual.addEventListener('click', () => {
     listaIdiomas.classList.toggle('toggle');
 });
 
+// Convertir los idiomas a un Array
 const opcionesArray = Array.from(idiomas);
-
+// Recorrer las opciones del traductor
 opcionesArray.forEach((opcion)=>{
     opcion.addEventListener('click',()=>{
         const idioma = opcion.getElementsByTagName('span')[0].textContent;
